@@ -1,0 +1,25 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e63946;
+    /* Tomato */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #d62828;
+    /* Darker tomato */
+}
+
+.scroll-to-top.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+}

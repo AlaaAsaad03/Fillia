@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Shadows+Into+Light&display=swap');
+
+
+.my-cases-container {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  transform: rotateX(-5deg);
+  /* Tilt the container slightly */
+  transform-origin: top center;
+  perspective: 1000px;
+  /* Adds depth for 3D effect */
+}
+
+.mycase-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 30px;
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: rotate(-2deg) translateZ(10px);
+  /* Tilting with slight forward movement */
+  height: 450px;
+  margin-bottom: 20px;
+}
+
+.mycase-card:hover {
+  transform: translateY(-10px) translateZ(20px);
+  /* Moves upward and closer for hover effect */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Position the done icon in the top-right corner */
+.done-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: green;
+  font-size: 1.5em;
+  /* Optional: Add animation */
+  animation: bounce 0.5s;
+}
+
+/* Keyframe for bounce animation */
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(-2.5px);
+  }
+}
+
+.my-cases-container:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+.page-title {
+  font-size: 32px;
+  color: #003153;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background-color: #003153;
+  margin: 0 auto 30px auto;
+}
+
+.cases-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
+}
+
+.case-itemm:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+
+/* .mycase-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 30px;
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+  transform: rotate(-2deg);
+  height: 450px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 20px;
+} 
+
+/* Container for the items list with fixed height */
+.case-items-container {
+  max-height: 250px;
+  /* Increased height for the items list */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  padding-right: 10px;
+  /* Optional, for better scroll appearance */
+}
+
+/* Hide scrollbar but keep scrolling */
+.case-items-container::-webkit-scrollbar {
+  display: none;
+}
+
+.case-items-container {
+  -ms-overflow-style: none;
+  /* For Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+.cases-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Reduced gap between cards */
+  justify-content: start;
+}
+
+
+.mycase-date {
+  font-size: 1em;
+  color: #666;
+  font-style: italic;
+}
+
+
+
+.mycase-card:hover {
+  transform: translateY(-10px);
+}
+
+.mycase-card:hover {
+  transform: translateY(-10px);
+}
+
+.mycase-actions {
+  text-align: right;
+}
+
+.verify-btn {
+  background-color: tomato;
+  color: rgb(241, 220, 220);
+  border: tomato solid;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 16px;
+  margin-left: 0;
+  /* Ensures no extra margin is added */
+}
+
+.action-button:hover {
+  background-color: tomato;
+  transform: scale(1.05);
+}
+
+
+.case-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.case-titlee {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003153;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive !important;
+
+}
+
+.case-items,
+.case-level {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+  padding-left: 10px;
+  flex-grow: 1;
+}
+
+.case-items span,
+.case-level span {
+  font-weight: bold;
+  color: #003153;
+}
+
+
+.case-items li {
+  font-size: 1.1em;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.case-items li:before {
+  font-size: 1.4em;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case-title {
+  display: flex;
+  align-items: center;
+  /* Gradient background */
+  padding: 5px 10px;
+  /* Padding for the title */
+  border-radius: 5px;
+  /* Rounded corners */
+  transition: background 0.3s ease;
+  /* Transition for hover effect */
+}
+
+
+.done-icon {
+  color: green;
+  margin-left: 0.5em;
+  font-size: 1.2em;
+  /* Slightly larger icon */
+  animation: bounce 0.5s;
+  /* Animation */
+}
+
+/* Keyframe for bounce animation */
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(-2.5px);
+  }
+}
+
+.cases-card-items {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.case-itemm {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4em;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  position: relative;
+  padding-left: 35px;
+  transform: rotate(-2deg);
+  color: #34495e;
+}
+
+.case-itemm::before {
+  content: '';
+  background-image: url('/doodle-bullet.png');
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+}
+
+.cases-card-item:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+
+.mycase-card {
+  background-color: #fefefe;
+  /* Light yellow for sticky notes */
+  border-radius: 10px;
+  /* Rounded corners */
+  width: 280px;
+  /* Smaller width */
+  height: 300px;
+  /* Adjust height for sticky note look */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 20px;
+  /* Slightly lower each card */
+  left: 10px;
+  /* Shift cards slightly to the right */
+  margin-bottom: -40px;
+  /* Negative margin to overlap cards */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transform: rotate(calc(-2deg + (6deg * var(--random-rotation))));
+
+}
+
+
+.mycase-card:hover {
+  transform: translateY(-5px);
+  /* Slight upward movement */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cases-card-item:hover {
+  text-decoration: underline;
+  color: #f36f45;
+  cursor: pointer;
+}
+
+.case-items-container {
+  max-height: 150px;
+  /* Set a maximum height for the item container */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  padding-right: 10px;
+  /* Optional, for better scroll appearance */
+  margin-top: 10px;
+  /* Margin to separate the items from the header */
+}
+
+/* Hide scrollbar but keep scrolling */
+.case-items-container::-webkit-scrollbar {
+  display: none;
+}
+
+.case-items-container {
+  -ms-overflow-style: none;
+  /* For Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+.mycase-card {
+  transform: rotate(calc(-2deg + (6deg * var(--random-rotation))));
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+
+.mycase-card {
+  background-color: #ffffff;
+  /* Light yellow for sticky notes */
+  border-radius: 12px;
+  /* Slightly rounded corners */
+  width: 280px;
+  height: 320px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: -30px;
+  /* Overlap effect */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transform: rotate(calc(-3deg + (6deg * var(--random-rotation))));
+}
+
+.mycase-card::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: tomato;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mycase-card:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mycase-card:nth-child(odd) {
+  transform: rotate(-2.5deg);
+}
+
+.mycase-card:nth-child(even) {
+  transform: rotate(2.5deg);
+}

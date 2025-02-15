@@ -1,0 +1,95 @@
+.suggestions-page {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-container {
+    display: flex;
+    justify-content: center;
+    width: 1630px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 600px;
+
+}
+
+.suggestion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.suggestion-info span:nth-child(odd) {
+    color: tomato;
+    font-weight: bold;
+
+}
+
+.suggestion-info span:nth-child(even) {
+    color: #003153;
+}
+
+.suggestion-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+    width: 1400px;
+}
+
+
+.suggestion-card:hover {
+    transform: scale(1.02);
+}
+
+.suggestion-image {
+    margin-right: 15px;
+}
+
+.circular-image {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.suggestion-info {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.suggestion-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.suggestion-actions select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.icon {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    color: #003153;
+
+}

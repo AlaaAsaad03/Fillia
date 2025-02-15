@@ -1,0 +1,360 @@
+.user-messaging-page {
+  display: flex;
+  /* Use flexbox for layout */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+
+}
+
+.user-messaging-container {
+  display: flex;
+  /* Keep user admin and chat sections side by side */
+  height: 100%;
+  /* Make sure it takes full height */
+  width: 100%;
+  /* Make sure it takes full width */
+}
+
+.user-admin-section {
+  flex: 3;
+  /* Increase this value to make the admin section wider */
+  max-width: 400px;
+  /* Optional: Set a max width for the admin section */
+  background-color: #003153;
+  /* Keep existing styles */
+  color: #fff;
+  padding: 20px;
+  /* Add padding for better layout */
+  overflow-y: none;
+  /* Allow scrolling if content overflows */
+}
+
+.user-chat-section {
+  flex: 2;
+  /* Decrease this value to make the chat section smaller */
+  display: flex;
+  flex-direction: column;
+  /* Align chat messages vertically */
+  padding: 20px;
+  /* Add padding for better layout */
+  background-color: #ecf0f1;
+  /* Background color for chat area */
+}
+
+.user-admin-section h2 {
+  text-align: center;
+  color: #bdb594;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.labeling {
+  color: #05133c;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.labelingg {
+  color: #05133c;
+  font-weight: bold;
+  font-size: larger;
+  margin-left: 5px;
+}
+
+.user-admin-list,
+.user-group-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 300px;
+  align-items: center;
+}
+
+
+.user-messaging-header h1 {
+  font-size: 20px;
+  color: #e74c3c;
+}
+
+.user-messaging-header p {
+  color: #3498db;
+}
+
+.user-admin-profile,
+.user-group-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: solid 1px #c9d0bd;
+  margin-bottom: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.user-admin-avatar,
+.user-group-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-admin-info {
+  flex: 1;
+  font-weight: bold;
+}
+
+.user-group-info {
+  display: flex;
+  flex-direction: row;
+  /* Keep name and icon in a row */
+  align-items: center;
+  /* Center align vertically */
+}
+
+.user-admin-name,
+.user-group-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-admin-status {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.user-admin-online {
+  color: #27ae60;
+}
+
+.user-admin-offline {
+  color: gray;
+}
+
+
+.user-chat-window {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.user-chat-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-search-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  /* Push search wrapper to the right */
+  transition: all 0.4s ease;
+  /* Enhanced smooth transition */
+}
+
+.user-search-input {
+  border: solid 1px #c9d0bd;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border: 2px solid #ff6b6b;
+}
+
+.user-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  height: 400px;
+  /* Fixed height */
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.user-messages::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 5px;
+}
+
+.user-messages::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.user-message-bubble {
+  max-width: 20%;
+  /* Adjust as needed */
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px 0;
+  position: relative;
+  word-wrap: break-word;
+  /* This allows long words to break */
+  overflow-wrap: break-word;
+  /* Additional support for breaking long words */
+}
+
+.user-message-bubble.unread {
+  font-size: 1.5rem;
+  /* Increase text size */
+  color: gray;
+  /* Change text color to gray */
+}
+
+.user-message-sent {
+  background-color: #d1f1d1;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  background-color: #d1f1d1;
+  /* Align user messages to the right */
+}
+
+.user-message-received {
+  align-self: flex-start;
+  background-color: #e8e8e8;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.user-timestamp {
+  font-size: 0.8rem;
+  /* Adjusts the font size for better visibility */
+  color: #666;
+  /* Light gray for the user-timestamp */
+}
+
+.user-message-bubble.user-message-sent {
+  background-color: #d1ffd1;
+  text-align: right;
+}
+
+.user-message-bubble.user-message-received {
+  background-color: #f1f1f1;
+  text-align: left;
+}
+
+.user-message-bubble.unread {
+  font-size: 1.5rem;
+  /* Increase text size */
+  color: gray;
+  /* Change text color to gray */
+}
+
+.user-message-sent .user-timestamp {
+  text-align: left;
+  margin-left: 3px;
+}
+
+.user-message-received .user-timestamp {
+  text-align: right;
+  margin-left: auto;
+}
+
+.user-sender-name {
+  font-weight: bold;
+}
+
+.user-textmsg {
+  margin: 5px 0;
+}
+
+.user-message-footer {
+  display: flex;
+  justify-content: space-between;
+  /* Aligns items to the edges */
+  margin-top: 5px;
+  /* Adds some space above */
+}
+
+.user-message-footer .user-read-status {
+  display: flex;
+  align-items: center;
+}
+
+.user-read-status i {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.user-typing-indicator {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.user-message-input {
+  display: flex;
+  gap: 10px;
+}
+
+.user-message-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-message-input button {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-placeholder {
+  text-align: center;
+  margin: auto;
+}
+
+.user-placeholder i {
+  color: #95a5a6;
+  margin-bottom: 10px;
+}
+
+.user-group-icon-container,
+.user-admin-icon-container {
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  margin-left: 230px;
+}
+
+
+.user-group-icon-container i,
+.user-admin-icon-container i {
+  color: white;
+  font-size: 1.2rem;
+  /* Smaller icon size */
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.user-group-icon-container i,
+.user-admin-icon-container i:hover {
+  transform: scale(1.1);
+  /* Slightly reduced hover scaling */
+}
+
+.user-read-status {
+  display: flex;
+  align-items: center;
+}
+
+.user-message-group {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,166 @@
+/* Same CSS as before */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-popup {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: white;
+}
+
+.login-popup-content {
+    padding: 20px;
+}
+
+.login-popup-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: tomato;
+    margin-bottom: 20px;
+}
+
+.login-popup-button {
+    width: 100%;
+    padding: 10px 15px;
+    background: tomato;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.login-popup-button:hover {
+    background: #e74c3c;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+.login-popup-footer {
+    padding: 15px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.footer-link {
+    color: tomato;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.loader-icon {
+    margin: auto;
+    animation: spin 1s linear infinite;
+}
+
+/* .forgot-password-link {
+    margin-top: 0px;
+    color: #76787a;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: right;
+} */
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #aaa;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Align with the center */
+    width: 40%;
+    /* Width of the lines */
+    height: 1px;
+    /* Thickness of the lines */
+    background-color: #aaa;
+    /* Color of the lines */
+}
+
+.divider::before {
+    left: 0;
+    /* Start from the left */
+}
+
+.divider::after {
+    right: 0;
+    /* Start from the right */
+}
+
+.google-login-container {
+    display: flex;
+    justify-content: center;
+    /* Center the button */
+    margin-top: 20px;
+    /* Add margin for spacing */
+}
+
+.google-login-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    /* Increase padding for a larger button */
+    font-size: 18px;
+    /* Increase font size */
+    background-color: #4285F4;
+    /* Google Color */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    /* Rounded corners */
+    cursor: pointer;
+    width: 100%;
+    /* Full width */
+    transition: background 0.3s;
+}
+
+.google-login-button:hover {
+    background-color: #357ae8;
+    /* Darker shade on hover */
+}

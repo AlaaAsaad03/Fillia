@@ -1,0 +1,363 @@
+.items-table-containerr {
+    overflow-x: auto;
+    padding: 20px;
+    border-radius: 15px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 24px rgba(11, 2, 2, 0.15);
+    scroll-behavior: smooth;
+    margin-top: 10px !important;
+}
+
+/* Custom Scrollbar Styles */
+.items-table-container::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+    height: 8px;
+    /* Height of the horizontal scrollbar */
+}
+
+.items-table-container::-webkit-scrollbar-track {
+    background: rgba(240, 240, 240, 0.8);
+    /* Background of the scrollbar track */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.items-table-container::-webkit-scrollbar-thumb {
+    background: rgba(100, 100, 100, 0.5);
+    /* Color of the scrollbar thumb */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.items-table-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.8);
+    /* Darker thumb on hover */
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.items-table th,
+.items-table td {
+    padding: 20px 15px !important;
+    text-align: center;
+    color: #003153;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.1);
+}
+
+.title-case-title {
+    text-align: left !important;
+    white-space: nowrap;
+    /* Optional: prevent text wrapping */
+    overflow: hidden;
+    /* Optional: prevent overflow */
+    text-overflow: ellipsis;
+    /* Optional: add ellipsis for long titles */
+}
+
+.items-table th {
+    background-color: rgba(190, 206, 227, 0.1);
+    color: #1e3a5f;
+    font-weight: 600;
+}
+
+.items-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.button-containerr {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 1474px;
+    display: block;
+}
+
+.add-case-button {
+    background-color: #003153;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-case-button:hover {
+    background-color: #0056b3;
+}
+
+.status-delivered {
+    background-color: rgba(217, 250, 217, 0.5);
+    color: green;
+}
+
+.status-processing {
+    color: orange;
+}
+
+.status-packing {
+    color: brown;
+}
+
+.status-outfordelivery {
+    color: blue;
+    font-size: 12px;
+}
+
+.form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+}
+
+.form-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.items-summary {
+    position: relative;
+    cursor: pointer;
+    /* Indicate hover capability */
+}
+
+.items-tooltip {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: max-content;
+}
+
+.items-summary:hover .items-tooltip {
+    display: block;
+    /* Show tooltip on hover */
+}
+
+.items-tooltip span {
+    display: block;
+    /* Each item will be on a new line */
+    margin: 3px 0;
+}
+
+/* Status Button Styles */
+.status-button {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    min-width: 120px;
+    margin-top: 20px;
+}
+
+/* Status Colors with Increased Transparency */
+.status-delivered {
+    background-color: rgba(217, 250, 217, 0.5);
+    color: green;
+}
+
+.status-processing {
+    background-color: rgba(251, 227, 141, 0.5);
+    color: #fa8a3fcf;
+}
+
+.status-packing {
+    background-color: rgba(139, 69, 19, 0.5);
+    /* Brown with more transparency */
+}
+
+.status-outfordelivery {
+    background-color: rgba(0, 0, 255, 0.5);
+    font-size: 12px;
+}
+
+/* Hover effects for status buttons */
+.status-button:hover {
+    opacity: 0.8;
+    /* Slightly less transparent on hover */
+}
+
+/* Additional styles for tables and buttons */
+.items-table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.out-for-delivery-button {
+    background-color: rgba(0, 0, 255, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.out-for-delivery-button:hover {
+    background-color: rgba(0, 0, 200, 0.7);
+}
+
+
+.status-out-for-delivery {
+    background-color: rgba(180, 188, 148, 0.685);
+    /* Adjust as needed */
+    color: white;
+    font-size: 12.5px;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.items-table th,
+.items-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.1);
+}
+
+.items-table th {
+    background-color: rgba(190, 206, 227, 0.1);
+    color: #1e3a5f;
+    font-weight: 600;
+}
+
+.items-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.add-case-button {
+    background-color: #003153;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-case-button:hover {
+    background-color: #0056b3;
+}
+
+.form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+}
+
+.form-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-button {
+    background-color: #0b1966;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-button:hover {
+    background-color: #218838;
+}
+
+.verified-icon {
+    color: green;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+
+.check-button {
+    color: green;
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+    left: 700px;
+}
+
+.items-table-containerr {
+    overflow-x: auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 24px rgba(11, 2, 2, 0.15);
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    align-items: stretch;
+    /* Stretch to fill available space */
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    /* Remove bottom margin */
+}
+
+.items-table th,
+.items-table td {
+    padding: 8px 10px;
+    /* Adjust padding as needed */
+    text-align: center;
+    color: #003153;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.1);
+}
+
+.button-containerr {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    /* Reduced margin for tighter spacing */
+}
+
+.form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+}

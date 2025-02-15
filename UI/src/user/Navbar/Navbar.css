@@ -1,0 +1,335 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* Initially transparent */
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent on scroll */
+}
+
+
+.navbar-brand {
+    display: flex;
+    /* Flexbox to align horizontally */
+    align-items: center;
+    /* Align items vertically at the center */
+    gap: 15px;
+    /* Space between logo and text */
+    margin-left: 20px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand-name {
+    font-size: 28px;
+    /* Larger font for emphasis */
+    font-weight: 700;
+    /* Bold text */
+    color: #0e1a42;
+    /* Matching theme color */
+    text-transform: uppercase;
+    /* Optional: Uppercase for strong branding */
+    letter-spacing: 1.5px;
+    /* Spacing for a modern look */
+    font-family: 'Poppins', sans-serif;
+    /* Clean, modern font */
+    margin: 0;
+    /* Remove any default margin */
+}
+
+.charity-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6347;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+.user-navbar-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #49557e;
+    transition: transform 0.2s;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.user-navbar-profile-img:hover {
+    transform: scale(1.1);
+}
+
+.notification-icon-user {
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-navbar-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #49557e;
+    transition: transform 0.2s;
+}
+
+.user-navbar-profile-img:hover {
+    transform: scale(1.1);
+}
+
+
+.nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff2ef;
+    padding: 10px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    margin-right: 3px;
+    z-index: 1000;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+
+.navbar-container.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+    position: relative;
+    /* Add this for relative positioning of the menu container */
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: #49557e;
+    position: relative;
+    /* Add this for relative positioning of each link */
+}
+
+.navbar-menu a.active {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.navbar-menu a.active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff6347;
+}
+
+.signin-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signin-btn:hover {
+    background-color: #ff4500;
+    /* Darker shade on hover */
+    transform: scale(1.05);
+    /* Slight scaling effect */
+}
+
+.signin-btn:focus {
+    outline: none;
+    /* Remove focus outline */
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.5);
+    /* Subtle focus ring */
+}
+
+.hamburger {
+    display: none;
+    /* Default hidden */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #49557e;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    /* Adjust this based on your navbar height */
+    left: 0;
+    /* Align to the left */
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    /* Full width */
+    z-index: 900;
+}
+
+.navbar-menu a {
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 100%;
+        z-index: 900;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+        /* Hide by default on small screens */
+    }
+
+    .hamburger {
+        display: flex;
+        /* Show hamburger on small screens */
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        /* Show menu when active */
+    }
+}
+
+.dot {
+    position: absolute;
+    bottom: 40px;
+    /* Adjust as needed */
+    right: 2px;
+    /* Adjust as needed */
+    width: 10px;
+    height: 10px;
+    background-color: rgb(117, 73, 39);
+    border-radius: 50%;
+}

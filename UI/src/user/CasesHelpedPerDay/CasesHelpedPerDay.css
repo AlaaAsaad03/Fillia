@@ -1,0 +1,22 @@
+/* Add this to your CSS file (e.g., Analysis.css or a global CSS file) */
+
+.card-container {
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(3deg) rotateY(5deg);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card-container:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(10deg);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #003153;
+}

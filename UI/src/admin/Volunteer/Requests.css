@@ -1,0 +1,157 @@
+.requests-page {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.request-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.request-card {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 2fr 1fr;
+    /* Equal spacing for alignment */
+    align-items: center;
+    padding: 23px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 90%;
+    color: #180553;
+}
+
+.request-card:hover {
+    transform: scale(1.02);
+}
+
+.request-info span {
+    font-size: 16px;
+    color: #130442;
+}
+
+.request-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.accept-btn {
+    background: #28a745;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reject-btn {
+    background: #dc3545;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icon {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    color: #003153;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Adjust spacing between select and icon */
+}
+
+.status-select {
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    width: 100px;
+    /* Reduce width */
+    text-align: center;
+}
+
+.icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    color: #003153;
+    transition: color 0.2s ease-in-out;
+}
+
+.icon:hover {
+    color: #007bff;
+}
+
+.identifier {
+    color: tomato;
+    font-weight: bold;
+    margin-right: 4px;
+    /* Spacing between label and value */
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-select {
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    width: 100px;
+    text-align: center;
+}
+
+.icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    color: #003153;
+    transition: color 0.2s ease-in-out;
+}
+
+.icon:hover {
+    color: #007bff;
+}
+
+.request-list {
+    max-height: 80vh;
+    /* Set max height to enable scrolling */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding-right: 10px;
+    /* Space for scrollbar */
+}
+
+/* Hide scrollbar for better UI */
+.request-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.request-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.request-list:hover::-webkit-scrollbar-thumb {
+    background-color: #555;
+}

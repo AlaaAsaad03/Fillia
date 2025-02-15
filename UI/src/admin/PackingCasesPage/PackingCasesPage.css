@@ -1,0 +1,146 @@
+/* Main Container */
+.packing-cases-page {
+  padding: 20px;
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #0000001a;
+}
+
+.page-title-packaging {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Cards Grid */
+.cards-container-packaging {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-content: first baseline;
+  /* Centers the cards if there's extra space */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Card Design */
+.case-card-packaging {
+  background: #ffffff;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  width: 200px;
+}
+
+.case-card-packaging:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.card-header-packaging {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-title-packaging {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barcode {
+  height: 20px;
+  /* Reduced height */
+  width: 20px;
+  /* Reduced width */
+  background: repeating-linear-gradient(90deg,
+      #333,
+      #333 2px,
+      #fff 2px,
+      #fff 5px);
+  border-radius: 2px;
+  margin-left: 10px;
+  /* Adds spacing from the title */
+}
+
+/* Content Section */
+.card-content-packaging {
+  flex: 1;
+}
+
+.card-item-packaging {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.card-item-icon-packaging {
+  margin-right: 8px;
+  color: #ff6f00;
+  font-size: 18px;
+}
+
+/* Footer Section */
+.card-footer-packaging {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-btn-packaging {
+  background: #ff6f00;
+  color: #fff;
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-btn-packaging:hover {
+  background: #e65c00;
+}
+
+
+.card-content-packaging {
+  flex: 1;
+  max-height: 100px;
+  /* Adjust height as needed */
+  overflow-y: auto;
+  /* Enables scrolling when content overflows */
+  padding-right: 5px;
+  /* Prevents scrollbar from overlapping content */
+}
+
+.card-content-packaging::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card-content-packaging::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.card-content-packaging::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}

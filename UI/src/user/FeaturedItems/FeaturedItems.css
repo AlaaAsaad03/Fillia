@@ -1,0 +1,37 @@
+.featured-items {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.featured-items h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.featured-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.featured-item {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.featured-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.featured-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}

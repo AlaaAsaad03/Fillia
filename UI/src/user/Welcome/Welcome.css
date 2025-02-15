@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* Welcome Section */
+.welcome-content {
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Hero Title */
+/* Hero Title */
+.hero-titlee {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #003153;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Patrick Hand", serif !important;
+    text-align: center;
+    /* Reduce bottom margin */
+    margin-top: 70px;
+    /* Move the title lower */
+}
+
+/* Subtitle and Image Container */
+.subtitle-image-container {
+    display: flex;
+    align-items: center;
+    margin-top: -150px;
+    /* Adjust this value as needed */
+}
+
+
+/* Hero Subtitle */
+.hero-subtitlee {
+    font-size: 2rem;
+    color: #0f476f;
+    max-width: 700px;
+    /* Increased width */
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* User Illustration */
+.hero-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user-imagee {
+    max-width: 750px;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        /* Adjusted for mobile */
+    }
+
+    .subtitle-image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-illustration {
+        justify-content: center;
+    }
+
+    .user-image {
+        max-width: 250px;
+    }
+}

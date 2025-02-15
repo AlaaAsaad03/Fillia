@@ -1,0 +1,159 @@
+.hero-container {
+    margin-top: 0;
+    padding: 20px;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 1450px;
+    margin-left: 195px;
+    margin-right: 195px;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('./Section.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    padding: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Subtle dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    color: #ffffff;
+    animation: fadeSlideIn 1.2s ease-in-out;
+    /* Smooth entry animation */
+}
+
+.title-animation {
+    font-size: 3.8rem;
+    font-weight: 700;
+    color: #F26045;
+    /* Tomato Orange */
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideFromLeft 1.5s ease-in-out;
+}
+
+.subtitle-animation {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #00539C;
+    /* Prussian Blue */
+    margin-bottom: 15px;
+    animation: slideFromRight 1.8s ease-in-out;
+}
+
+.description-animation {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button {
+    padding: 15px 50px;
+    background: linear-gradient(135deg, #FF6347, #FF856A);
+    /* Gradient effect */
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px 50px 10px 10px;
+    /* Creative pill shape */
+    box-shadow: 0px 5px 15px rgba(255, 99, 71, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: bounceIn 2s ease-in-out;
+    /* Entry animation */
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, #FF856A, #FF6347);
+    /* Reverse gradient */
+    box-shadow: 0px 10px 20px rgba(255, 99, 71, 0.5);
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

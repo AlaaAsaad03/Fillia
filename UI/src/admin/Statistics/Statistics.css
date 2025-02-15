@@ -1,0 +1,52 @@
+.statistics {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px #0000001a;
+}
+
+.admin-page-title {
+    font-size: 2rem;
+    color: tomato;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.admin-title-underline {
+    width: 50%;
+    height: 4px;
+    background-color: #ffe8e4;
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-bottom: 50px;
+}
+
+.statistics-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.overview-section {
+    margin-bottom: 20px;
+    border: 2px;
+}
+
+.charts-section {
+    margin-bottom: 20px;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.revenue-section {
+    margin-bottom: 20px;
+}
+
+.map-section {
+    margin-top: 20px;
+}

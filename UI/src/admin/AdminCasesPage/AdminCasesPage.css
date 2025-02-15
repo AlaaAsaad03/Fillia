@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Shadows+Into+Light&display=swap');
+
+:root {
+  --primary-color: #4caf50;
+  /* Green */
+  --secondary-color: #ff9800;
+  /* Orange */
+  --text-color: #333;
+  --light-bg: #f9f9f9;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.admin-cases-page {
+  padding: 20px;
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.lock-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  text-align: center;
+}
+
+.lock-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: tomato;
+}
+
+.lock-overlay p {
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  position: relative;
+  z-index: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  margin-left: 0;
+}
+
+.case-card {
+  position: relative;
+  max-width: 300px;
+  max-height: 400px;
+  overflow: visible;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+}
+
+.case-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.case-card h3.case-title {
+  position: absolute;
+  bottom: 110px;
+  left: 33%;
+  transform: translateX(-50%);
+  color: #0d0c53;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+  text-align: center;
+  z-index: 90;
+}
+
+.case-card:hover h3.case-title {
+  transform: translateX(-50%) translateY(-10px);
+  /* Slight rise on hover */
+  opacity: 1;
+}
+
+.case-card .file:hover+h3.case-title {
+  opacity: 0.8;
+  /* Fades slightly with hover */
+}
+
+
+
+.popuppp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popuppp-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .popuppp-content {
+    width: 95%;
+  }
+}
+
+.header-bar .search-bar {
+  width: 50%;
+  padding: 12px 20px;
+  border: 2px solid tomato;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #f9f9f9;
+  margin-bottom: 0px;
+}
+
+.search-bar:focus {
+  border-color: tomato;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+  outline: none;
+}
+
+.popuppp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* The 'paper' effect */
+.popuppp-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 0.4s ease-out;
+  background-image: linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+  background-size: 100% 30px;
+  border: 2px solid #bbb;
+  font-family: 'Shadows Into Light', cursive;
+  color: #333;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Title styling with handwritten font */
+.popuppp-header h1 {
+  margin: 0;
+  font-size: 60px;
+  color: #333;
+  font-family: 'Caveat', cursive;
+  text-align: center;
+}
+
+/* Close button */
+.closee-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+.popuppp-container {
+  width: 300px;
+  max-width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popuppp-body {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.popuppp-body p {
+  margin: 8px 0;
+  font-family: 'Caveat', cursive;
+  font-size: large;
+  font-weight: bold;
+
+}
+
+.popuppp-body p strong {
+  font-weight: 600;
+}
+
+.action-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.action-buttons img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.action-buttons img:hover {
+  transform: scale(1.1);
+}
+
+.action-buttons img:active {
+  transform: scale(0.9);
+}
+
+
+.stamp {
+  position: absolute;
+  top: 24px;
+  right: 5px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-15deg);
+}
+
+.stamp img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* Accepted Stamp */
+.accepted-stamp {
+  /* Green background */
+  color: white;
+}
+
+.rejected-stamp {
+  color: white;
+  width: 80%;
+  right: 15px;
+  top: 30px;
+}
+
+.review-stamp {
+  color: white;
+  width: 80%;
+  right: 15px;
+  top: 48px;
+}
+
+/* Toggle button */
+.toggle-button {
+  position: absolute;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 254);
+  bottom: 20px;
+  width: 30px;
+  box-shadow: #707065 0 0 7px;
+}
+
+
+.toggle-button:disabled {
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-container {
+  text-align: left;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 24px;
+  color: #4caf50;
+  /* Green color for the icon */
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect */
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(236, 231, 231, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  animation: fadeIn 0.3s ease-in-out;
+  /* Fade-in effect */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  text-align: center;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.closee {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+} */
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.document-title {
+  font-family: 'Shadows Into Light', cursive;
+  /* Use the same font as other headings */
+  font-size: 24px;
+  color: #333;
+  /* Consistent color */
+  margin-bottom: 10px;
+  /* Consistent margin */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  text-align: center;
+}
+
+.closee {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  /* Color of the close button */
+  transition: color 0.3s;
+  /* Transition for hover effect */
+}
+
+.closee:hover {
+  color: #ff0000;
+  /* Change color on hover for better visibility */
+}
+
+/* Rest of your CSS remains unchanged */
+
+.salary-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.check-document {
+  cursor: pointer;
+  font-family: 'Shadows Into Light', cursive;
+  color: #adc6e0;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.check-document:hover {
+  color: #65db7a;
+}
+
+.toggle-ai-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  width: 120px
+}
+
+.icon-img {
+  width: 40px;
+  height: 30px;
+}
+
+.toggle-ai-button.enabled {
+  background-color: #28a745;
+  color: white;
+}
+
+.toggle-ai-button.disabled {
+  background-color: #dc3545;
+  color: white;
+}
+
+.toggle-ai-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.ai-toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.ai-status-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ai-status-indicator {
+  display: flex;
+  align-items: center;
+  border: #ffffff solid 2px;
+}
+
+.status-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: rgb(65, 12, 101);
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.ai-label {
+  font-size: 14px;
+  color: #070450;
+  font-size: larger;
+  font-weight: bold;
+  margin-right: 2px;
+}

@@ -1,0 +1,163 @@
+/* Main container for the dashboard */
+.dashboard-containerr {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  box-shadow: 5 6px 30px #0000001a;
+}
+
+/* Background image with blur effect */
+.dashboard-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/pic.png');
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+/* Dashboard content area with semi-transparent background */
+.dashboard-contentt {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  margin-left: 270px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  /* Light transparency for glassy effect */
+  backdrop-filter: blur(10px);
+  /* Glassy blur effect */
+  height: 95vh;
+  border-radius: 8px;
+  /* Optional: rounded corners */
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+/* Layout for the dashboard content */
+.dashboard-content {
+  display: flex;
+  flex: 1;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+/* Main section layout */
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Statistics container */
+.stat {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Category breakdown */
+.CategoryBreakdown {
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+/* Weekly spending and user vs average spending */
+.WeeklySpending,
+.UserVsAverageSpending {
+  margin-top: 5px;
+  margin-left: 80px;
+  flex: 1;
+  height: 100px;
+}
+
+/* Layout for right side statistics */
+.right-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* My Orders section */
+.MyOrders {
+  margin-top: 5px;
+}
+
+/* Sidebar layout */
+.sidebar {
+  background-color: #ffffff;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 900px) {
+  .statistics-container {
+    grid-template-columns: 1fr;
+  }
+
+  .large-statistic {
+    grid-column: span 1;
+    height: auto;
+  }
+}
+
+/* Main layout container */
+.dashboard-layoutt {
+  display: flex;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+/* Fixed height for the entire dashboard */
+.dashboard-containerr {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Additional adjustments for layout responsiveness */
+.dashboard-contentt {
+  flex: 1;
+  margin-left: 270px;
+  margin-top: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  background: url('/pic.png');
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 0 1000px rgba(248, 246, 246, 0.7);
+  height: 95vh;
+
+}
+
+.welcome-message {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* Ensure it appears above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  /* Set a width to avoid collapsing */
+}

@@ -1,0 +1,57 @@
+/* Admin Layout */
+.dashboard-admin {
+    display: flex;
+    flex-direction: row;
+    /* Set up side-by-side layout */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebarrr {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    /* Fixed sidebar */
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+
+
+.main-contentt {
+    flex: 1;
+    margin-left: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: white;
+    background-image: url('/adminbg.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .sidebarrr {
+        position: relative;
+        /* Make sidebar relative on small screens */
+        width: 100%;
+        /* Full width on mobile */
+        height: auto;
+        /* Auto height */
+    }
+
+    .main-contentt {
+        margin-left: 0;
+        /* Reset margin for mobile */
+        width: 100%;
+        /* Full width on mobile */
+    }
+}

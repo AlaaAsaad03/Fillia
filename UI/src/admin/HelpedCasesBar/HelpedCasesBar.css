@@ -1,0 +1,66 @@
+.container {
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1C3F95;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rank {
+    font-size: 23px;
+    font-weight: bold;
+    color: tomato;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.progress-bar {
+    background-color: #1C3F95;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    min-width: 50px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.cases-count {
+    font-size: 16px;
+    font-weight: bold;
+    color: tomato;
+    white-space: nowrap;
+
+}

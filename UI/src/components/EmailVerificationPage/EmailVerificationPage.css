@@ -1,0 +1,162 @@
+.container {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    /* Default stacking for smaller screens */
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    max-width: 900px;
+    margin: 5rem auto 0;
+    /* Add space from the top */
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-card {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 0;
+    /* Remove the top margin from form card */
+    height: 450px;
+}
+
+.enhanced-card {
+    display: flex;
+    flex-direction: row;
+    /* Side-by-side layout */
+    justify-content: space-between;
+    /* Space between image and content */
+    align-items: center;
+    /* Center align vertically */
+    gap: 2rem;
+    /* Spacing between elements */
+    width: 100%;
+    max-width: 900px;
+    padding: 1rem;
+}
+
+.form-image {
+    flex-shrink: 0;
+    max-width: 40%;
+    /* Keep the image on one side */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* Ensure the image doesn't distort */
+}
+
+.form-content {
+    flex-grow: 1;
+    width: 100%;
+    /* Allow form content to grow */
+    max-width: 60%;
+    /* Limit form content width */
+}
+
+.form-titlee {
+    font-size: 2rem;
+    color: tomato;
+    margin-bottom: 1rem;
+}
+
+.form-description {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    /* Prevent text from overflowing */
+}
+
+.verification-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-group-email {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.verification-input {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.25rem;
+    border: 2px solid #cbd5e0;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.verification-input:focus {
+    border-color: tomato;
+    background: #fff;
+}
+
+.btn {
+    width: 100%;
+    max-width: 300px;
+    background: tomato;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .enhanced-card {
+        flex-direction: column;
+        /* Stack content vertically */
+        align-items: center;
+        text-align: center;
+        /* Center-align text */
+    }
+
+    .form-image {
+        max-width: 80%;
+        /* Scale the image down */
+        margin-bottom: 1rem;
+    }
+
+    .form-content {
+        max-width: 100%;
+        /* Allow form content to span the full width */
+    }
+}
+
+/* Media Query for very small screens */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .form-description {
+        font-size: 0.9rem;
+    }
+
+    .verification-input {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem;
+    }
+}

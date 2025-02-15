@@ -1,0 +1,25 @@
+.text-white {
+    color: white;
+}
+
+.text-tomato {
+    color: #ff6347;
+    /* Tomato */
+}
+
+.btn-tomato {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.admin-event-management .fc-button {
+    background-color: #ff6347;
+    color: white;
+}
+
+.admin-event-management .fc-daygrid-day:hover {
+    background-color: #ff6347;
+    color: white;
+}

@@ -1,0 +1,370 @@
+@font-face {
+    font-family: "Porcelain";
+    src: url("/fonts/Porcelain.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.EventSection {
+    background-color: white;
+    padding: 50px 20px;
+    color: #000f38;
+}
+
+/* Layout */
+.about-us-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Left Section */
+.who-we-are {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.who-we-are h2 {
+    font-family: "Porcelain";
+    font-size: 90px;
+    color: tomato;
+    margin-bottom: 20px;
+}
+
+.porcelain-font {
+    font-family: 'Porcelain', sans-serif;
+    /* Adjust to your actual porcelain font */
+}
+
+.about-us-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-us-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.call-to-action {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000f38;
+}
+
+/* Right Section - Cases */
+.cases-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 50px;
+}
+
+/* Notepaper Effect */
+.case-note-unique {
+    background: #fffef0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    min-height: 150px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-family: "Patrick Hand", cursive;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transform-origin: top;
+}
+
+/* Different Angles */
+.case-0 {
+    transform: rotate(-2deg);
+}
+
+.case-1 {
+    transform: rotate(2deg);
+}
+
+/* Floating Effect */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.case-note-unique {
+    animation: float 2s infinite ease-in-out;
+}
+
+/* Pin Effect */
+.pin {
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-us-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .who-we-are {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .cases-section {
+        width: 100%;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .case-note-unique {
+        width: 80%;
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title .n {
+    color: rgb(15, 13, 103);
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+.about-cards-container {
+    display: flex;
+    gap: -30px;
+    padding: 10px;
+    overflow: visible;
+    white-space: nowrap;
+    width: 100%;
+    width: auto;
+    margin-top: 30px;
+}
+
+.about-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+    transform: rotate(-2deg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: paper-float 3s infinite ease-in-out;
+
+}
+
+/* Add random rotation for a clumsy effect */
+.about-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.about-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-pin-icon {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 28px;
+    z-index: 10;
+}
+
+.about-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-card-title {
+    font-size: 1.6em;
+    font-weight: 600;
+    font-family: 'Shadows Into Light', cursive;
+    color: #34495e;
+    text-align: center;
+}
+
+.about-card-date {
+    font-size: 1em;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+.about-card-items {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+    max-height: none;
+    /* Remove max-height to show all items */
+    overflow-y: visible;
+    /* Show all items without scrolling */
+}
+
+/* Hide scrollbars for all browsers */
+.about-card-items::-webkit-scrollbar,
+.about-card-items {
+    display: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.about-card-item {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4em;
+    line-height: 1.8;
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    position: relative;
+    padding-left: 35px;
+    color: #34495e;
+}
+
+
+
+.about-card-item::before {
+    content: '';
+    background-image: url('/doodle-bullet.png');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+}
+
+.about-card-item:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+.about-card-item:hover {
+    text-decoration: underline;
+    color: #f36f45;
+    cursor: pointer;
+}
+
+
+
+.discover-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Aligns content to the right */
+    margin-top: 20px;
+}
+
+.discover-more {
+    font-size: 1rem;
+    color: tomato;
+    /* Change to your preferred link color */
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 8px;
+    /* Space between icon and text */
+}
+
+.discover-more:hover {
+    color: rgb(248, 89, 61);
+    /* Darker shade on hover */
+}
+
+.abt-pic {
+    width: 1000px;
+    margin-right: 150px;
+    margin-top: -5px;
+}
+
+.about-event-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adds spacing between elements */
+    position: relative;
+}
+
+.event-section-img {
+    max-width: 1350px !important;
+    margin-left: 10%;
+}
+
+.arw-event-section {
+    width: 18%;
+    z-index: 2;
+    position: absolute;
+    margin-left: -20%;
+    margin-top: -10%;
+}
+
+.calender {
+    width: 15%;
+    position: relative;
+    z-index: 3;
+    position: absolute;
+    top: 14%;
+    left: 60% !important;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: 0.3s;
+    width: 215PX;
+}
+
+.event-section-textt {
+    width: 740px;
+    margin-left: -10%;
+}
+
+.events-btns {
+    position: absolute;
+    left: 23%;
+    top: 260px;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    opacity: 0;
+    border: 2px solid rgb(98, 14, 14);
+
+
+}

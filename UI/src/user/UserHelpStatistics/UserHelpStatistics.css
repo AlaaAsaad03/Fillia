@@ -1,0 +1,20 @@
+.user-help-statistics-container {
+    height: 600px;
+}
+
+.total-helped-items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Ensures it takes the full height of the card */
+}
+
+.total-helped-items {
+    font-size: 6rem;
+    /* Adjust the size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20%;
+    color: rgb(11, 11, 90);
+}

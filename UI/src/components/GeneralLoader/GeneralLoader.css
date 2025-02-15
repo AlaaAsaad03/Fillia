@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Shadows+Into+Light&display=swap');
+
+/* General Loader Container */
+.general-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: 90%;
+    min-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.general-loader::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Semi-transparent black */
+    z-index: -1;
+    /* Ensure it's behind the loader content */
+    backdrop-filter: blur(8px);
+    /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(8px);
+    /* Safari compatibility */
+}
+
+
+
+/* Background animation for a dynamic aesthetic */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f2f2, #f5f9fa);
+    background-size: 400% 400%;
+    animation: gradient-flow 6s ease infinite;
+}
+
+/* Ensure loader content adjusts dynamically */
+.loader-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+/* Adjust loader gif styling for centering */
+.loader-gif {
+    display: block;
+    margin: 0 auto 20px;
+    width: 155px;
+    height: auto;
+}
+
+/* Loader message adjusts with text length */
+.loader-message {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ed5408;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/* Subtext styling */
+.loader-subtext {
+    font-size: 16px;
+    color: #1e90ff;
+    margin-bottom: 30px;
+    font-family: 'Shadows Into Light', cursive;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+/* Progress bar styling */
+.loader-progress {
+    width: 80%;
+    /* Make progress bar adapt */
+    max-width: 300px;
+    height: 15px;
+    background-color: rgba(30, 144, 255, 0.2);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #ff6347;
+    animation: loading-bar 3s ease-in-out infinite;
+}
+
+
+/* Keyframes */
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loading-bar {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 85%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}

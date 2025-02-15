@@ -1,0 +1,85 @@
+.schedule-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.schedule-popup-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.popup-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #003153;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-control:focus {
+    border-color: #003153;
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #003153;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #001f2f;
+}
+
+.cancel-button {
+    background-color: #ff6347;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #e04d3a;
+}

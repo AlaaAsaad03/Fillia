@@ -1,0 +1,96 @@
+ .sidebarr {
+     width: 250px;
+     background: rgb(235, 229, 228);
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     color: #333;
+     margin: 20px;
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     overflow-y: auto;
+ }
+
+ .sidebarr-logo {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 20px;
+     margin-right: 50px
+ }
+
+ .logo-image {
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     margin-right: 10px;
+ }
+
+ .logo-text {
+     font-size: 2em;
+     font-weight: bold;
+     color: #1C3F95;
+     margin-top: 19px;
+ }
+
+ .sidebarr-options {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .sidebarr-option {
+     display: flex;
+     align-items: center;
+     padding: 15px;
+     text-decoration: none;
+     color: #06166e;
+     font-weight: bold;
+     transition: background-color 0.3s,
+         transform 0.2s;
+     border-radius: 8px;
+     margin: 2px 0;
+ }
+
+ .sidebarr-option img {
+     margin-right: 10px;
+     transition: transform 0.2s;
+ }
+
+ .sidebarr-option:hover {
+     background-color: #d3d4d4;
+     /* Light pink */
+     transform: translateX(5px);
+ }
+
+ .sidebarr-option img:hover {
+     transform: scale(1.1);
+ }
+
+ .sidebarr-option.active {
+     background-color: #dfd9d7;
+
+     color: #959597;
+     /* OrangeRed color */
+ }
+
+ .sidebarr-title,
+ .logo-text {
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ .sidebarr-title::after,
+ .logo-text::after {
+     content: '';
+     display: block;
+     height: 2px;
+     background-color: transparent;
+     transition: background-color 0.3s;
+     margin-top: 5px;
+ }
+
+ .logo-text:hover::after {
+     background-color: #ff6347;
+     /* Tomato color on hover */
+ }

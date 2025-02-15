@@ -1,0 +1,474 @@
+/* .headerNew {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-header {
+    margin-top: 100px;
+    height: 100vh;
+    width: 90%;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+.card-of-header {
+    position: absolute;
+    top: 26%;
+    left: 93% !important;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: 0.3s;
+    z-index: 2;
+    width: 200PX;
+}
+
+.title-of-header {
+    position: absolute;
+    top: 56%;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: 0.3s;
+    z-index: 2;
+    width: 700PX;
+    margin-top: 20px;
+}
+
+.box-of-header {
+    position: absolute;
+    top: 40%;
+    left: 12% !important;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: 0.3s;
+    z-index: 2;
+    width: 300PX;
+}
+
+.hand-of-header {
+    position: absolute;
+    top: 82%;
+    left: 23% !important;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: 0.3s;
+    z-index: 2;
+    width: 300PX;
+}
+
+.arrow-of-header {
+    position: absolute;
+    top: 45%;
+    left: 70% !important;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: 0.3s;
+    z-index: 3;
+    width: 250PX;
+}
+
+.run-of-header {
+    position: absolute;
+    top: 69%;
+    left: 83% !important;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: 0.3s;
+    z-index: 2;
+    width: 516px;
+}
+
+.learn-more-btn {
+    position: absolute;
+    left: 50%;
+    top: 690px;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    opacity: 1;
+    border: 2px solid rgb(98, 14, 14);
+
+}
+
+.learn-more-btn {
+    position: absolute;
+    left: 50%;
+    top: 685px;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    opacity: 1;
+    border: 2px solid rgb(98, 14, 14);
+    z-index: 4;
+    opacity: 0;
+}
+
+
+.headerNew {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-header {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-of-header,
+.title-of-header,
+.box-of-header,
+.hand-of-header,
+.arrow-of-header,
+.run-of-header {
+    position: absolute;
+    height: auto;
+    transition: 0.3s;
+    z-index: 2;
+    max-width: 100%;
+}
+
+.card-of-header {
+    top: 15%;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 180px;
+}
+
+.title-of-header {
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+}
+
+.box-of-header {
+    top: 40%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    width: 253px;
+}
+
+.hand-of-header {
+    top: 82%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+}
+
+.arrow-of-header {
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+}
+
+.run-of-header {
+    top: 80%;
+    left: 87% !important;
+    transform: translate(-50%, -50%);
+    width: 516px;
+}
+
+.learn-more-btn {
+    position: absolute;
+    left: 50%;
+    top: 620px;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid rgb(98, 14, 14);
+    z-index: 4;
+    opacity: 0;
+}
+
+*/
+
+/* Base Styles */
+.headerNew {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Image */
+.bg-header {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Common Image Styles */
+.card-of-header,
+.title-of-header,
+.box-of-header,
+.hand-of-header,
+.arrow-of-header,
+.run-of-header {
+    position: absolute;
+    height: auto;
+    transition: 0.3s;
+    z-index: 2;
+    max-width: 100%;
+}
+
+/* Adjust Image Positions */
+.card-of-header {
+    top: 15%;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 180px;
+}
+
+.title-of-header {
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+}
+
+.box-of-header {
+    top: 40%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    width: 253px;
+}
+
+.hand-of-header {
+    top: 82%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+}
+
+.arrow-of-header {
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+}
+
+.run-of-header {
+    top: 80%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    width: 516px;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    position: absolute;
+    left: 50%;
+    top: 620px;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid rgb(98, 14, 14);
+    z-index: 4;
+    opacity: 0;
+}
+
+/* ✅ Responsive Fixes */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .card-of-header {
+        top: 10%;
+        left: 85%;
+        width: 150px;
+    }
+
+    .title-of-header {
+        top: 50%;
+        width: 500px;
+    }
+
+    .box-of-header {
+        left: 15%;
+        width: 220px;
+    }
+
+    .hand-of-header {
+        top: 85%;
+        width: 200px;
+    }
+
+    .arrow-of-header {
+        left: 65%;
+        width: 200px;
+    }
+
+    .run-of-header {
+        top: 85%;
+        left: 80%;
+        width: 400px;
+    }
+
+    .learn-more-btn {
+        top: 650px;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    .card-of-header {
+        top: 5%;
+        left: 80%;
+        width: 120px;
+    }
+
+    .title-of-header {
+        top: 45%;
+        width: 350px;
+    }
+
+    .box-of-header {
+        left: 20%;
+        width: 180px;
+    }
+
+    .hand-of-header {
+        top: 90%;
+        width: 150px;
+    }
+
+    .arrow-of-header {
+        left: 60%;
+        width: 150px;
+    }
+
+    .run-of-header {
+        top: 90%;
+        left: 75%;
+        width: 300px;
+    }
+
+    .learn-more-btn {
+        top: 670px;
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .card-of-header {
+        top: 3%;
+        left: 75%;
+        width: 100px;
+    }
+
+    .title-of-header {
+        top: 40%;
+        width: 250px;
+    }
+
+    .box-of-header {
+        left: 25%;
+        width: 150px;
+    }
+
+    .hand-of-header {
+        top: 92%;
+        width: 120px;
+    }
+
+    .arrow-of-header {
+        left: 55%;
+        width: 120px;
+    }
+
+    .run-of-header {
+        top: 93%;
+        left: 70%;
+        width: 250px;
+    }
+
+    .learn-more-btn {
+        top: 700px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+
+/* HeaderNew.css */
+@media (max-width: 1024px) {
+    .title-of-header {
+        width: 500px;
+    }
+
+    .card-of-header {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-of-header {
+        width: 350px;
+    }
+
+    .card-of-header {
+        width: 120px;
+    }
+
+    .learn-more-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-of-header {
+        width: 250px;
+    }
+
+    .card-of-header {
+        width: 100px;
+    }
+
+    .learn-more-btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}

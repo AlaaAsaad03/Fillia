@@ -1,0 +1,967 @@
+.event-page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 200px;
+}
+
+.event-title {
+    font-size: 30px;
+    color: tomato;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+
+.event-description {
+    font-size: 50px;
+    color: #18067f;
+    margin-top: 5px;
+    text-transform: none;
+    text-align: center;
+}
+
+.event-container {
+    margin-top: 90px;
+    padding: 20px;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 1450px;
+    margin-left: 195px;
+    margin-right: 195px;
+    align-items: center;
+
+}
+
+
+.cases-containeer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Changed to 4 columns */
+    gap: 20px;
+    /* Adjust gap as needed */
+
+}
+
+
+
+.case-cardd {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 15px;
+    position: relative;
+    max-width: 300px;
+    max-height: 500px;
+    overflow: visible;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+
+
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.case-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.category-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: tomato;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.case-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.hrr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 6px;
+}
+
+.t22 {
+    font-size: 25px;
+    color: #18067f;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+.case-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0c054c;
+    margin-bottom: 5px;
+}
+
+.case-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    max-height: 150px;
+    /* Adjust this value based on the card size */
+    overflow: hidden;
+    /* Hide text if it exceeds max-height */
+    text-overflow: ellipsis;
+    /* Add ellipsis for overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Number of lines before truncating */
+    -webkit-box-orient: vertical;
+}
+
+.progress-container {
+    position: relative;
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 10px;
+    height: 6px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-barr {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.progress-filll {
+    height: 100%;
+    background: #f4a622;
+    transition: none;
+    /* Remove transition to prevent movement */
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #f4a622;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.donation-amount {
+    font-weight: bold;
+    color: #041256;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.case-cardd {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 15px;
+    position: relative;
+    /* Make the card relative to position the donate button */
+    max-width: 300px;
+    max-height: 500px;
+    margin-bottom: 20px;
+}
+
+.donate-btn {
+    position: absolute;
+    /* Position the button absolutely */
+    bottom: 15px;
+    /* Keep it 15px from the bottom of the card */
+    left: 50%;
+    /* Center the button horizontally */
+    transform: translateX(-50%);
+    /* Correct horizontal centering */
+    width: 80%;
+    /* Button width */
+    background: tomato;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.donate-btn:hover {
+    background: tomato;
+}
+
+
+/* Funds Info */
+.funds-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.funds-info .raised {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #041256;
+}
+
+.funds-info .goal {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #888;
+}
+
+.slider-container {
+    margin-top: 20px;
+    /* Added space between slider and text */
+    padding: 10px;
+    /* Added padding to prevent overlap with other content */
+    background: #f8f8f8;
+    /* Light background for the container */
+    border-radius: 8px;
+    /* Rounded corners for a clean look */
+}
+
+.donation-slider {
+    width: 100%;
+    /* Ensures the slider fills the available width */
+    height: 10px;
+    /* Adjust slider height for better visibility */
+    background: #e0e0e0;
+    /* Light gray track */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin-bottom: 15px;
+    /* Adds spacing below the slider */
+}
+
+.slider-thumb {
+    background: tomato;
+    /* Thumb color */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    /* Adds contrast to the thumb */
+}
+
+.slider-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+}
+
+.slider-info span {
+    font-weight: bold;
+}
+
+
+.case-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left;
+    max-height: none;
+    overflow: visible;
+    white-space: normal;
+}
+
+
+.case-cardd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    position: relative;
+    max-width: 300px;
+    height: 100%;
+}
+
+.case-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.funds-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-container {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.case-cardd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* Ensure all cards have the same height */
+}
+
+.case-content {
+    flex-grow: 1;
+    /* Ensures it takes up available space */
+}
+
+.pcont {
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.event-title {
+    font-size: 50px;
+    color: tomato;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 99, 71, 0.8), 0 0 20px rgba(255, 99, 71, 0.5);
+    animation: glow 1.5s infinite alternate;
+}
+
+.event-description {
+    font-size: 30px;
+    color: #18067f;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(24, 6, 127, 0.7);
+    animation: glowBlue 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 99, 71, 0.8), 0 0 10px rgba(255, 99, 71, 0.5);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(255, 99, 71, 1), 0 0 25px rgba(255, 99, 71, 0.8);
+    }
+}
+
+@keyframes glowBlue {
+    0% {
+        text-shadow: 0 0 5px rgba(24, 6, 127, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(24, 6, 127, 1);
+    }
+}
+
+.countdown-container {
+    position: fixed;
+    /* Fixes the element relative to the viewport */
+    top: 150px;
+    /* Distance from the top */
+    right: 20px;
+    /* Distance from the right */
+    text-align: center;
+    margin: 5px auto;
+    /* Reduced margin */
+    padding: 8px;
+    /* Reduced padding */
+    background: transparent;
+    border-radius: 6px;
+    /* Reduced border radius */
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    /* Reduced shadow */
+    max-width: 350px;
+    /* Reduced max-width */
+    z-index: 999;
+    /* Ensure it stays on top of other elements */
+}
+
+
+.countdown-title {
+    font-size: 0.9rem;
+    /* Smaller font size */
+    font-weight: bold;
+    color: tomato;
+    margin-bottom: 3px;
+    /* Smaller margin */
+}
+
+.countdown-timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    /* Reduced gap */
+    justify-content: center;
+}
+
+.timer-card {
+    background: #1c2d6b;
+    /* Persian Blue */
+    color: white;
+    padding: 4px;
+    /* Reduced padding */
+    border-radius: 3px;
+    /* Smaller border radius */
+    text-align: center;
+    min-width: 35px;
+    /* Reduced minimum width */
+}
+
+.time {
+    font-size: 1rem;
+    /* Smaller font size */
+    font-weight: bold;
+}
+
+.label {
+    font-size: 0.6rem;
+    /* Smaller font size */
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+
+.event-container {
+    max-width: 1400px;
+    /* Reduce from 1450px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.case-cardd.goal-reached {
+    opacity: 0.5;
+    /* Make the card appear faded */
+    pointer-events: none;
+    /* Disable interactions */
+}
+
+.donate-btn:disabled {
+    background: #cccccc;
+    /* Grey out the button */
+    cursor: not-allowed;
+    /* Show a "not-allowed" cursor */
+}
+
+.items-containerr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.item-cardd {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 10px;
+
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+}
+
+.item-imagee {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: #041256 2px solid;
+    margin-right: 20px;
+}
+
+.item-contentt {
+    margin-bottom: -100px;
+}
+
+.item-contentt h3 {
+    font-size: 18px;
+    color: #0c054c;
+}
+
+.item-contentt p {
+    color: #666;
+    font-size: 14px;
+}
+
+.item-actionss {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 70PX;
+}
+
+
+
+.buy-now-btn,
+.info-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.buy-now-btn {
+    background: tomato;
+    color: white;
+    margin-top: 10px;
+    /* Add this line to create space above the button */
+
+}
+
+.info-btn {
+    background: prussianblue;
+    color: white;
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Popup Styles */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    color: #050e49;
+}
+
+.popup-content h2 {
+    font-weight: bold;
+}
+
+.user-info-event {
+    display: flex;
+    align-items: center;
+    /* Aligns the image and text vertically in the center */
+    margin-top: 30px;
+    border-radius: 12px;
+    color: rgb(7, 7, 61);
+}
+
+.user-image-event {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-details-event {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+user-details-event p {
+    font-size: 14px;
+    color: #050e49;
+    margin: 5px 0;
+}
+
+.location-phone p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    margin-left: 70px;
+}
+
+.quantity {
+    margin-top: 20px;
+}
+
+.location-phone svg {
+    margin-right: 8px;
+}
+
+.popup-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Input Fields */
+.popup-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.popup-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Quantity Input */
+.popup-content input[type="number"] {
+    text-align: center;
+}
+
+/* Buy Button */
+.buy-btn {
+    background: tomato;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background: #e74c3c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .popup-content {
+        width: 95%;
+    }
+}
+
+
+.sold-out {
+    opacity: 0.6;
+    filter: grayscale(100%);
+    pointer-events: none;
+    /* Prevent interactions */
+}
+
+.sold-out-btn {
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+}
+
+.large-countdown-container {
+    text-align: center;
+    /* Center content */
+    margin-top: 20px;
+
+}
+
+.large-countdown-title {
+    font-size: 2rem;
+    /* Larger font size */
+    font-weight: bold;
+    color: tomato;
+    /* Title color */
+    margin-bottom: 50px;
+    /* Space below title */
+    text-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
+    /* Glowy effect */
+}
+
+.large-countdown-timer {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: center;
+    /* Center horizontally */
+    gap: 50px;
+    /* Spacing between cards */
+}
+
+.large-timer-card {
+    background: #1c2d6b;
+    /* Persian Blue */
+    color: white;
+    padding: 40px;
+    /* Increased padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    text-align: center;
+    width: 200px;
+    /* Fixed width for larger cards */
+    height: 200px;
+    /* Fixed height for larger cards */
+    display: flex;
+    /* Use flex for centering content */
+    flex-direction: column;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    transition: transform 0.3s;
+    /* Add a slight scale effect on hover */
+}
+
+.large-timer-card:hover {
+    transform: scale(1.1);
+    /* Scale up slightly on hover */
+}
+
+.large-time {
+    font-size: 3rem;
+    /* Larger font size for time */
+    font-weight: bold;
+}
+
+.large-label {
+    font-size: 1.2rem;
+    /* Adjust font size for labels */
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.add-ccase-btn {
+    background-color: tomato;
+    /* Green background */
+    color: white;
+    /* White text */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    text-align: center;
+    /* Center text */
+    text-decoration: none;
+    /* No underline */
+    display: inline-block;
+    /* Inline block for proper spacing */
+    font-size: 16px;
+    /* Font size */
+    margin: 10px 2px;
+    /* Margin */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transition for hover effect */
+    width: 200px;
+    margin-top: 36px;
+    margin-left: 560px;
+}
+
+.add-ccase-btn:hover {
+    background-color: #ff4b27;
+    /* Darker green on hover */
+    transform: scale(1.05);
+    /* Slightly increase size on hover */
+}
+
+.add-ccase-btn:disabled {
+    background-color: #ccc;
+    /* Gray background for disabled state */
+    cursor: not-allowed;
+    /* Not allowed cursor */
+}
+
+.event-page {
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+
+
+@media (max-width: 600px) {
+    .case-cardd {
+        max-width: 100%;
+        /* Allow cards to take full width */
+    }
+}
+
+/* EventPage.css */
+
+.add-item-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-item-popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-item-title {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-item-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-item-input-pair {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.add-item-input-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-item-input-wrapper-full {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-item-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-item-input-name,
+.add-item-input-quantity,
+.add-item-input-price,
+.add-item-input-phone,
+.add-item-input-location,
+.add-item-input-description {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-item-input-image {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.add-item-input-description {
+    resize: vertical;
+}
+
+.add-item-submit-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(12, 25, 112);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-item-submit-btn:hover {
+    background-color: #e5533d;
+}
+
+.open-add-item-btn {
+    padding: 10px 20px;
+    background-color: persianblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.open-add-item-btn:hover {
+    background-color: #1e4fa3;
+}
+
+
+.add-item-close-popup {
+    cursor: pointer;
+}

@@ -1,0 +1,383 @@
+/* .map-panel-section {
+    background-color: white;
+    padding: 50px 20px;
+    color: #000f38;
+}
+
+.map-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.map-panel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+}
+
+.map-panel-container {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.mapp {
+    width: 100%;
+    height: 500px;
+}
+
+.map-panel-content {
+    width: 50%;
+    max-width: none;
+    text-align: right;
+    margin-left: auto;
+}
+
+.map-panel-content p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000f38;
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 140px;
+}
+
+.map-panel h2 {
+    font-family: "Porcelain";
+    font-size: 90px;
+    color: tomato;
+}
+
+.fingerprint-container {
+    position: relative;
+    margin-left: -2px;
+    margin-top: -60px;
+}
+
+
+.del {
+    width: 850px;
+}
+
+.counter {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.counter h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.counter p {
+    font-size: 1.5rem;
+}
+
+.fingerprint-container {
+    position: relative;
+    margin-left: -50px !important;
+    margin-top: 350px;
+}
+
+.del {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 900px;
+    z-index: -1;
+
+}
+
+.map-panel-content {
+    position: relative;
+    width: 50%;
+    max-width: none;
+    text-align: right;
+    margin-left: auto;
+    z-index: 2;
+}
+
+.map-panel-content p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000f38;
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 140px;
+    position: relative;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.items-btn {
+    position: absolute;
+    left: 85%;
+    top: -110px;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: hidden;
+    opacity: 0;
+
+}
+
+.items-btn:hover {
+    background-color: #e63946;
+} */
+
+
+.map-panel-section {
+    background-color: white;
+    padding: 50px 20px;
+    color: #000f38;
+}
+
+.map-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* Allow elements to wrap on smaller screens */
+}
+
+.map-panel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    flex-wrap: wrap;
+    /* Allow map and content to wrap on smaller screens */
+}
+
+.map-panel-container {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.mapp {
+    width: 100%;
+    height: 500px;
+}
+
+.map-panel-content {
+    width: 50%;
+    max-width: none;
+    text-align: right;
+    margin-left: auto;
+}
+
+.map-panel-content p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000f38;
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 140px;
+}
+
+.map-panel h2 {
+    font-family: "Porcelain";
+    font-size: 90px;
+    color: tomato;
+}
+
+.fingerprint-container {
+    position: relative;
+    margin-left: -2px;
+    margin-top: -60px;
+}
+
+.del {
+    width: 850px;
+}
+
+.counter {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.counter h1 {
+    font-size: 3rem;
+    /* Make the counter larger */
+    margin: 0;
+}
+
+.counter p {
+    font-size: 1.5rem;
+    /* Adjust for readability */
+}
+
+.fingerprint-container {
+    position: relative;
+    margin-left: -50px !important;
+    margin-top: 350px;
+}
+
+.del {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 900px;
+    z-index: -1;
+}
+
+.map-panel-content {
+    position: relative;
+    width: 50%;
+    max-width: none;
+    text-align: right;
+    margin-left: auto;
+    z-index: 2;
+}
+
+.map-panel-content p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000f38;
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 140px;
+    position: relative;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Items button */
+.items-btn {
+    position: absolute;
+    left: 85%;
+    top: -110px;
+    transform: translate(-50%, -50%);
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: hidden;
+    opacity: 0;
+}
+
+.items-btn:hover {
+    background-color: #e63946;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .map-panel-container {
+        width: 100%;
+    }
+
+    .map-panel-content {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        padding-top: 30px;
+    }
+
+    .map-panel-content p {
+        font-size: 1.5rem;
+        margin-top: 40px;
+    }
+
+    .map-panel h2 {
+        font-size: 60px;
+    }
+
+    .del {
+        width: 100%;
+    }
+
+    .items-btn {
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+        opacity: 0;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .map-panel {
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .map-panel-container,
+    .map-panel-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .map-panel-content p {
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+
+    .map-panel h2 {
+        font-size: 50px;
+    }
+
+    .del {
+        width: 100%;
+    }
+
+    .items-btn {
+        left: 50%;
+        top: 10px;
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-panel-section {
+        padding: 30px 10px;
+    }
+
+    .map-panel h2 {
+        font-size: 40px;
+    }
+
+    .map-panel-content p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .items-btn {
+        left: 50%;
+        top: 20px;
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+
+    .del {
+        width: 100%;
+    }
+}

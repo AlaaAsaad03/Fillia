@@ -1,0 +1,392 @@
+/* .add {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: transparent;
+    background-size: cover;
+    height: 100vh;
+} */
+
+.lock-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* Light translucent background */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    text-align: center;
+}
+
+.lock-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #ff6347;
+    /* Tomato color */
+}
+
+.lock-overlay p {
+    font-size: 20px;
+    color: #333;
+    /* Text color */
+    margin: 0;
+}
+
+/* Blur effect for unauthorized users */
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+    position: relative;
+    z-index: 0;
+    /* Ensure blur is below the lock overlay */
+}
+
+.page-title {
+    font-size: 2rem;
+    color: tomato;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.title-underline {
+    width: 50%;
+    height: 4px;
+    background-color: #ffe8e4;
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-bottom: 50px;
+}
+
+.add h2 {
+    color: #081e77;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Form Layout */
+.add form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.add input[type="text"],
+input[type="number"],
+textarea {
+    flex: 1 1 calc(50% - 20px);
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.add input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border: 1px solid #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.4);
+    outline: none;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.button-container button {
+    margin: 0 5px;
+    /* Horizontal margin */
+    padding: 10px 20px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+
+.button-container button:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+}
+
+.button-container button:active {
+    transform: translateY(0);
+    background-color: #a93226;
+}
+
+.btns {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Section Styling */
+.add section {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tables */
+.add table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.add table th,
+table td {
+    text-align: center;
+    /* Centers content horizontally */
+    /* Centers content vertically */
+    padding: 10px;
+}
+
+.add table img {
+    max-width: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    /* Centers the image horizontally */
+}
+
+.add thead th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.add tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.add tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.add tbody tr:hover {
+    background-color: #ececec;
+}
+
+.button-container button {
+    margin: 0 5px;
+}
+
+
+/* File Upload Styles */
+.custom-file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px dashed #e74c3c;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #fdf2f1;
+    border-color: #c0392b;
+}
+
+.custom-file-upload span {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+        flex: 1 1 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+}
+
+
+/* Tables */
+.add .category-table,
+.add .subcategory-table {
+    /* Change to auto to prevent fixed widths */
+    max-width: 100%;
+    /* Ensure it fits within the container */
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    /* Prevent overflow */
+    table-layout: auto;
+    /* Allow the table to adjust based on content */
+}
+
+.add .category-table th,
+.add .category-table td,
+.add .subcategory-table th,
+.add .subcategory-table td {
+    text-align: center;
+    padding: 10px;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .add .category-table,
+    .add .subcategory-table {
+        display: block;
+        /* Allow table to scroll on small screens */
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+        white-space: nowrap;
+        /* Prevent text wrapping */
+    }
+}
+
+.subcategory-table td:last-child {
+    width: 60px;
+    /* Set a reasonable width */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+    text-align: center;
+    /* Centers buttons */
+}
+
+.button-containerrr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* Adds space between buttons */
+}
+
+.button-containerrr button {
+    padding: 5px 8px;
+    /* Reduces button padding */
+    font-size: 14px;
+    /* Makes buttons slightly smaller */
+    width: 60px;
+    /* Set a fixed width for consistency */
+    border-radius: 4px;
+}
+
+.custom-select {
+    width: 200px;
+    /* Adjust this value for desired width */
+    flex: none;
+    /* Prevents flex properties from affecting the width */
+    font-size: 14px;
+    /* Adjust font size if needed */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.custom-input {
+    width: 200px !important;
+    flex: 2px !important;
+    font-size: 14px;
+    left: 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.table-container {
+    max-height: 300px;
+    /* Set a maximum height */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    /* Optional: add a border for better visibility */
+    border-radius: 8px;
+    /* Optional: rounded corners */
+}
+
+/* Custom scrollbar styles */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: transparent;
+    /* Hide the track */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #040761;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #040761;
+    /* Darker color on hover */
+}
+
+/* For Firefox */
+.table-container {
+    scrollbar-width: thin;
+    /* Make scrollbar thinner */
+    scrollbar-color: #040761 transparent;
+    /* Thumb color and track color */
+}
+
+.table-container:hover {
+    scrollbar-color: #040761 transparent;
+    /* Darker on hover */
+}

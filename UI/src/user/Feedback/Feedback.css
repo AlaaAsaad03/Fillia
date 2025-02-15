@@ -1,0 +1,494 @@
+ .feedback-section {
+     background-color: white;
+     padding: 50px 20px;
+     color: #000f38;
+
+ }
+
+ .cards-feed h2 {
+     font-family: "Porcelain";
+     font-size: 90px;
+     color: tomato;
+     margin-bottom: -3px !important;
+     margin-left: -55px;
+ }
+
+ .FeedBacks-Layout {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     padding: 50px 20px;
+ }
+
+
+
+ .feedback-container {
+     position: relative;
+     max-width: 600px;
+     margin: 50px auto;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: -30px;
+     padding: 10px;
+     overflow: visible;
+     white-space: nowrap;
+     width: 100%;
+ }
+
+ .feedback-card-wrapper {
+     position: relative;
+     width: 100%;
+     height: 400px;
+ }
+
+ .feedback-card {
+     position: absolute;
+     width: 80%;
+     height: 70%;
+     background: white;
+     border-radius: 20px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     padding: 20px;
+     transition: transform 0.4s ease, opacity 0.4s ease;
+ }
+
+ .feedback-card:not(.active) {
+     transform: scale(0.9) translateX(20px) translateY(10px);
+     opacity: 0.7;
+ }
+
+ .feedback-card.active {
+     transform: scale(1) translateX(0px) translateY(0px);
+     opacity: 1;
+     z-index: 2;
+ }
+
+ .profile-image {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     object-fit: cover;
+     margin-bottom: 10px;
+ }
+
+ .feedback-name {
+     font-size: 18px;
+     font-weight: bold;
+     color: #333;
+ }
+
+ .feedback-designation {
+     font-size: 12px;
+     color: #555;
+ }
+
+ .feedback-text {
+     font-size: 14px;
+     color: #333;
+     font-weight: 500;
+     margin-top: 10px;
+ }
+
+ .feedback-date {
+     font-size: 10px;
+     color: gray;
+     margin-top: 10px;
+ }
+
+ .feedback-controls {
+     display: flex;
+     gap: 10px;
+ }
+
+ .control-button {
+     background: tomato;
+     color: white;
+     border: none;
+     padding: 10px;
+     border-radius: 50%;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: background 0.3s ease;
+ }
+
+ .control-button:hover {
+     background: darkblue;
+ }
+
+ .FeedBacks-Layout {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     width: 100%;
+ }
+
+ .cards-feed,
+ .feedback-form {
+     width: 50%;
+     padding: 20px;
+ }
+
+ .feedback-container {
+     position: relative;
+     max-width: 600px;
+     margin: 50px auto;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     overflow: visible;
+     white-space: nowrap;
+     width: 1000px !important;
+ }
+
+
+ .feedback-form {
+     margin-top: 200px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .feedback-form textarea {
+     width: 55%;
+     height: 300px !important;
+     margin-top: 10px;
+     padding: 100px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     resize: none;
+
+ }
+
+
+ .submit-buttonn {
+     background: tomato;
+     width: 13%;
+     color: white;
+     border: none;
+     padding: 4px;
+     border-radius: 5px;
+     cursor: pointer;
+     margin-top: 11px;
+     transition: background 0.3s ease;
+     margin-left: 5%;
+ }
+
+
+ .feedback-form h2 {
+     font-family: "Porcelain";
+     font-size: 35px;
+     color: rgb(9, 4, 64);
+     margin-bottom: 10px;
+     margin-left: 2%;
+ }
+
+
+ .feedback-section {
+     background-color: white;
+     padding: 30px 10px;
+     color: #000f38;
+ }
+
+
+
+ .FeedBacks-Layout {
+     padding: 20px 10px;
+ }
+
+ .feedback-container {
+     margin: 10px auto;
+     padding: 4px;
+     margin-left: 80px;
+     margin-top: 90px;
+ }
+
+ .feedback-form {
+     margin-top: 300px;
+ }
+
+ .feedback-form textarea {
+     height: 200px !important;
+     padding: 50px;
+     background: white;
+     opacity: 0.7;
+     width: 43%;
+     margin-top: -1.75%;
+ }
+
+ .feedback-controls {
+     display: flex;
+     gap: 5px;
+     justify-content: center;
+     align-items: center;
+     margin-top: -45px !important;
+     margin-left: 235px !important;
+ }
+
+ .feedback-card-wrapper {
+     position: relative;
+     width: 100%;
+     height: 400px;
+     margin-bottom: -3px !important;
+     margin-top: 15px;
+ }
+
+
+
+ .img-con {
+     border: #000f38 1px solid;
+ }
+
+ .cloud {
+     width: 620px;
+     margin-top: 65px;
+ }
+
+ .FeedBacks-Layout {
+     position: relative;
+     padding: 20px 10px;
+     display: flex;
+     justify-content: center;
+ }
+
+ .cloud {
+     width: 760px;
+     margin-top: 20px;
+     z-index: 1;
+ }
+
+ .feedback-form {
+     position: absolute;
+     top: 1%;
+     left: 88%;
+     transform: translate(-50%, -50%);
+     z-index: 2;
+     width: 35% !important;
+     padding: 10px;
+     border-radius: 10px;
+ }
+
+
+ .feedback-card {
+     position: absolute;
+     width: 90%;
+     height: 85%;
+     background: white;
+     border-radius: 20px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     padding: 25px;
+     font-size: 1.1rem;
+     transition: transform 0.4s ease, opacity 0.4s ease;
+ }
+
+ .feedback-card.active {
+     transform: scale(1.1) translateX(0px) translateY(-10px);
+     opacity: 1;
+     z-index: 2;
+ }
+
+ .feedback-container {
+     position: relative;
+     max-width: 700px;
+     margin: 20px auto;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     overflow: visible;
+     white-space: nowrap;
+     width: 100%;
+ }
+
+ .feedback-controls {
+     display: flex;
+     gap: 10px;
+     justify-content: center;
+     align-items: center;
+     margin-top: -30px !important;
+     margin-left: 120px;
+ }
+
+ .control-button {
+     background: tomato;
+     color: white;
+     border: none;
+     padding: 15px;
+     border-radius: 50%;
+     cursor: pointer;
+     font-size: 1.3rem;
+     transition: background 0.3s ease;
+ }
+
+ .control-button:hover {
+     background: darkblue;
+ }
+
+ .cloud {
+     width: 760px;
+     margin-top: 30px;
+     position: relative;
+     z-index: 1;
+ }
+
+ .feedback-container {
+     margin-top: 50px;
+     z-index: 2;
+     margin-right: -20px;
+ }
+
+ .feedback-header {
+     margin-top: -80px;
+     margin-left: -290px;
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+ }
+
+ .feedback-name {
+     margin-top: -30px;
+     color: tomato;
+     font-weight: 800;
+ }
+
+ .feedback-text {
+     bottom: 9px !important;
+     color: rgb(9, 4, 64);
+     margin-bottom: -3px;
+     font-weight: bold;
+     font-size: 15px;
+     margin: 10px 0;
+     word-wrap: break-word;
+     overflow-wrap: break-word;
+     white-space: normal;
+     display: -webkit-box;
+     -webkit-line-clamp: 5;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     text-align: center;
+ }
+
+
+ .feedback-card {
+     gap: 40px !important;
+ }
+
+ .feedback-date {
+     margin-top: 200px !important;
+ }
+
+ .cardbody {
+     margin-bottom: -3px;
+     top: 30px !important;
+ }
+
+ .quote-mark {
+     color: tomato;
+     font-size: 2rem;
+ }
+
+ .quote-mark {
+     color: tomato;
+     font-size: 3rem;
+     font-family: 'Georgia', serif;
+     position: relative;
+     display: inline-block;
+     animation: quoteAnim 0.5s ease-in-out;
+ }
+
+ @keyframes quoteAnim {
+     0% {
+         transform: translateY(-10px) rotate(0deg);
+     }
+
+     50% {
+         transform: translateY(5px) rotate(5deg);
+     }
+
+     100% {
+         transform: translateY(0) rotate(0deg);
+     }
+ }
+
+
+ .feedback-card {
+     position: absolute;
+     width: 90%;
+     height: 85%;
+     background: white;
+     border-radius: 20px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     padding: 25px;
+     font-size: 1.1rem;
+     transition: transform 0.4s ease, opacity 0.4s ease;
+     overflow: hidden;
+ }
+
+ .feedback-header {
+     margin-top: 8px;
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+ }
+
+ .feedback-name {
+     color: tomato;
+     font-weight: 800;
+     font-size: 1.2rem;
+ }
+
+ .feedback-text {
+     bottom: 9px !important;
+     color: rgb(9, 4, 64);
+     margin-bottom: 10px;
+     font-weight: bold;
+     font-size: 15px;
+     word-wrap: break-word;
+     overflow-wrap: break-word;
+     white-space: normal;
+     display: -webkit-box;
+     -webkit-line-clamp: 5;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     text-align: center;
+ }
+
+ .feedback-card {
+     position: absolute;
+     width: 90%;
+     min-height: 200px;
+     background: white;
+     border-radius: 20px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     padding: 25px;
+     font-size: 1.1rem;
+     transition: transform 0.4s ease, opacity 0.4s ease;
+     overflow: hidden;
+ }

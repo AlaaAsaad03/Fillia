@@ -1,0 +1,48 @@
+.request-cardd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: rgb(12, 12, 108);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.identifierr {
+    color: tomato;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.request-cardd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 1300px;
+}
+
+.identifierr {
+    color: tomato;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+}
+
+.status-select {
+    margin-right: 8px;
+}
+
+.icon {
+    margin-left: 4px;
+}

@@ -1,0 +1,142 @@
+.food-display {
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.food-display-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Adjust gap between elements */
+    width: 100%;
+    margin-bottom: 60px;
+    margin-left: 5px;
+}
+
+.searchhh-barrr {
+    flex: 1;
+    /* Allow the search bar to take up remaining space */
+    padding: 10px 20px;
+    /* Adjusted padding */
+    border: 2px solid tomato;
+    border-radius: 30px;
+    font-size: 14px;
+    width: 300px;
+}
+
+.price-filter {
+    display: flex;
+    align-items: center;
+    margin-left: 830px;
+    color: tomato;
+
+}
+
+.price-slider {
+    width: 200px;
+    /* Adjust width */
+    color: tomato;
+    cursor: pointer;
+    accent-color: tomato;
+}
+
+.sort-dropdown {
+    padding: 4px 8px;
+    /* Reduced padding */
+    border: 2px solid tomato;
+    border-radius: 5px;
+    font-size: 12px;
+    /* Smaller font size */
+    background-color: white;
+    cursor: pointer;
+    width: 100px !important;
+    /* Fixed width */
+    /* Space between filter and sort */
+}
+
+.filter-label {
+    margin-right: 5px;
+    /* Space between label and slider */
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    /* Adjust left position */
+    color: gray;
+    font-size: 16px;
+    /* Adjust icon size */
+}
+
+.items-h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #16169a;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.page-button,
+.page-number {
+    background-color: #ebe9e7bf;
+    /* Tomato color */
+    color: rgb(2, 16, 88);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.page-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.page-number {
+    background-color: #d3d3d3;
+    /* Light gray */
+    color: black;
+}
+
+.page-number.active {
+    background-color: #1e3a8a;
+    /* Persian Blue */
+    color: white;
+}
+
+.page-number:hover,
+.page-button:hover:not(:disabled) {
+    background-color: #ff6b5a;
+    /* Lighter tomato */
+}
+
+.ellipsis {
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+.countdown__container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.countdown__card {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80px;
+}
+
+.countdown__card__bg {
+    background: linear-gradient(145deg, #333, #111);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.countdown__card__number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.countdown__card__label {
+    font-size: 14px;
+    margin-top: 5px;
+}

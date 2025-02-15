@@ -1,0 +1,215 @@
+.orders-page {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.admin-section {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Lock overlay */
+.lock-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* Light translucent background */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    text-align: center;
+}
+
+.lock-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #ff6347;
+    /* Tomato color */
+}
+
+.lock-overlay p {
+    font-size: 20px;
+    color: #333;
+    /* Text color */
+    margin: 0;
+}
+
+/* Blur effect for unauthorized users */
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+    position: relative;
+    z-index: 0;
+    /* Ensure blur is below the lock overlay */
+}
+
+.orders-title {
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-bottom: 30px;
+}
+
+.orders-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Ensures spacing between cards */
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    /* Add some padding to the container */
+}
+
+.order-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.order-icon {
+    width: 50px;
+    margin-bottom: 15px;
+    /* Spacing below the icon */
+}
+
+.order-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0c0c5f;
+    margin-bottom: 10px;
+}
+
+.order-address {
+    font-size: 14px;
+    color: #070d52;
+    margin-bottom: 10px;
+}
+
+.order-items {
+    font-size: 14px;
+    color: #070d52;
+    margin-bottom: 10px;
+}
+
+.order-amount {
+    font-size: 16px;
+    color: #003153;
+    margin-bottom: 10px;
+}
+
+.order-status {
+    width: 160px;
+    padding: 10px;
+    border: 1px solid #ff6347;
+    border-radius: 4px;
+    background-color: #fff0f0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.order-status:hover {
+    background-color: #ffe4e1;
+}
+
+.orders-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .order-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.search-and-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.searchh-barr {
+    width: 15%;
+    padding: 12px 20px;
+    border: 2px solid #8b8b8b;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f9f9f9;
+    margin-left: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    /* Align items horizontally */
+    align-items: center;
+    /* Center icon and input vertically */
+}
+
+.search-icon {
+    font-size: 18px;
+    /* Adjust size of the icon */
+    color: #646363;
+    /* Icon color */
+    margin-right: 10px;
+    /* Space between icon and input */
+}
+
+.searchh-barr input {
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.filter-buttonss {
+    gap: 20px;
+}
+
+.filter-buttonn {
+    padding: 10px;
+    background-color: transparent;
+    color: rgb(184, 199, 224);
+    border: 2px solid rgb(209, 218, 232);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+
+}
+
+.filter-buttonn:hover {
+    background-color: #fffcfb;
+}

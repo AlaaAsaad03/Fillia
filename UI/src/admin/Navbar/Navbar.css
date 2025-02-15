@@ -1,0 +1,214 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* Clean background */
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar .logout-button {
+    border: none;
+    padding: 8px;
+    /* Adjust padding to avoid overlap */
+}
+
+
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.logo {
+    height: 70px;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    border: 2px solid #ff6f61;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+.notification-bell {
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.bell-icon {
+    color: #ff6f61;
+    font-size: 2em;
+}
+
+
+.logout-button {
+    background-color: transparent;
+    color: #ff6f61;
+    /* No border */
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    border: none !important;
+    /* Ensures no border overrides */
+
+}
+
+.logout-button:hover {
+    color: #ff4500;
+}
+
+.logout-button svg {
+    font-size: 2.5em;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: tomato;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.title-underline {
+    width: 50%;
+    height: 4px;
+    background-color: #ffe8e4;
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-bottom: 50px;
+}
+
+.notification-icon {
+    color: #ff6f61;
+    font-size: 2em;
+}
+
+.notification-countt {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: linear-gradient(135deg, #0b36e1, #03094b);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.notification-count:hover {
+    transform: scale(1.2);
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 90px;
+    left: 90%;
+    transform: translateX(-50%);
+    /* Center the dropdown under the bell */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    /* Adjust width as needed */
+    z-index: 1000;
+    overflow: hidden;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: #f9f9f9;
+}
+
+.notification-item-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+}
+
+.notification-item-message {
+    flex: 1;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.notification-item-time {
+    font-size: 12px;
+    color: #999;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

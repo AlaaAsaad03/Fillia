@@ -1,0 +1,24 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [35.12, 33.05],
+              [35.12, 34.64],
+              [36.65, 34.64],
+              [36.65, 33.05],
+              [35.12, 33.05]
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Lebanon"
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,205 @@
+.question-Parts {
+    background-color: white;
+    padding: 30px 20px;
+    color: #000f38;
+    height: 100%;
+}
+
+
+
+/* Container layout */
+.user-questions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    margin-left: 280px !important;
+}
+
+/* Questions Section */
+.questions-section {
+    width: 55%;
+    overflow: hidden;
+    position: relative;
+}
+
+.faq-title {
+    font-family: "Porcelain";
+    font-size: 90px;
+    color: tomato;
+    margin-bottom: 20px !important;
+    margin-left: 20px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: hidden;
+
+}
+
+/* Each question item */
+.faq-item {
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Question styling */
+.faq-question {
+    padding: 15px;
+    background-color: #ffedd5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: darkblue;
+    font-size: 18px;
+    font-weight: 500;
+    height: 40px;
+    border-radius: 5px;
+}
+
+/* Answer styling */
+.faq-answer {
+    background-color: #f3f4f6;
+    color: darkblue;
+    padding: 10px;
+    height: 60px;
+
+}
+
+/* Ask Question Form */
+.ask-question-form {
+    margin-top: -30px !important;
+    width: 40%;
+}
+
+.form-title {
+    font-family: "Porcelain";
+    font-size: 45px;
+    color: rgb(9, 4, 64);
+}
+
+.form-subtext {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    color: darkblue;
+
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #f3f4f6;
+    color: darkblue;
+    font-size: 16px;
+}
+
+/* Form inputs */
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background: #f3f4f6;
+    color: darkblue;
+    font-size: 16px;
+}
+
+/* Submit button */
+.form-submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff6347;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 10px;
+
+}
+
+.form-submit-btn:hover {
+    background: #b45309;
+}
+
+.alert {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ff6347;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1000;
+    width: auto;
+    min-width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alert.success {
+    background-color: white;
+    /* Tomato color */
+}
+
+.alert.error {
+    background-color: white;
+    /* Dark red */
+}
+
+
+/* Parent Container Layout */
+.user-questions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* Questions Section */
+.questions-section {
+    width: 55%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.faq-list {
+    flex-grow: 1;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ask-question-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    left: 40% !important;
+}
+
+.ask-question-form form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-bottom: 50px !important;
+
+}

@@ -1,0 +1,19 @@
+.category-breakdown-container {
+    background-color: transparent;
+    /* Make the background transparent */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(11, 2, 2, 0.15);
+    /* Optional: can be removed if no shadow needed */
+    margin-right: 0;
+    width: 100%;
+    /* Remove right margin */
+}
+
+.card-title {
+    color: #003153;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    text-align: center;
+}

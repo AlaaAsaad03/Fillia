@@ -1,0 +1,86 @@
+.my-orders-page {
+  width: 100%;
+  height: 450px;
+  background-color: transparent;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(11, 2, 2, 0.15);
+}
+
+.my-orders-page h2 {
+  color: #003153;
+  font-size: 24px;
+  font-weight: bold;
+  /* Ensures the title is bold */
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.orders-table-container {
+  width: 100%;
+  max-height: 350px;
+  /* Match CategoryBreakdown */
+  overflow: auto;
+  border-radius: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 49, 83, 0.5) transparent;
+  scroll-behavior: smooth;
+  /* Enable smooth scrolling */
+}
+
+/* Custom scrollbar styling for Webkit-based browsers */
+.orders-table-container::-webkit-scrollbar {
+  width: 8px;
+  /* Scrollbar width */
+  height: 8px;
+  /* Horizontal scrollbar height (if you need it) */
+}
+
+.orders-table-container::-webkit-scrollbar-track {
+  background: rgba(240, 240, 240, 0.8);
+  /* Background of the scrollbar track */
+  border-radius: 5px;
+  /* Rounded corners */
+
+}
+
+.orders-table-container::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.5);
+  /* Color of the scrollbar thumb */
+  border-radius: 5px;
+  /* Rounded corners */
+  /* Smooth transition on hover */
+}
+
+.orders-table-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 49, 83, 0.8);
+  /* Change color on hover */
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px 15px;
+  text-align: center;
+  color: #003153;
+  border-bottom: 1px solid rgba(216, 216, 216, 0.1);
+}
+
+.orders-table th {
+  background-color: rgba(190, 206, 227, 0.1);
+  color: #1e3a5f;
+  font-weight: 600;
+}
+
+.orders-table tr:hover {
+  background-color: #f9f9f9;
+}

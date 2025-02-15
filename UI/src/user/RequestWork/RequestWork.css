@@ -1,0 +1,71 @@
+.popup-overlay-work {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 41, 55, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container-work {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-icon-work {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF6347;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.work-h h2 {
+    color: #FF6347;
+    margin-bottom: 15px;
+}
+
+.work-form input,
+.select-work {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    text-align: left;
+}
+
+.submit-btn-work {
+    background: darkblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 50%;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-left: 0.25rem;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+.success {
+    color: green;
+    margin-top: 5px;
+}

@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.cart-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 200px;
+}
+
+.cart-header {
+    background-color: tomato;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.cart-title {
+    font-size: 36px;
+    margin: 0;
+    color: white;
+}
+
+.cart-content {
+    display: flex;
+    padding: 20px;
+}
+
+.cart-items {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cart-item {
+    background: rgba(255, 99, 71, 0.1);
+    /* Light tomato */
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* Ensure it takes the full width of the grid cell */
+    max-width: 300px;
+    /* Limit card size */
+    margin: 0 auto;
+    /* Center the card */
+    border: 2px solid red;
+}
+
+.cart-item:hover {
+    transform: scale(1.05);
+}
+
+.item-image {
+    width: 100%;
+    /* Ensure image fills the card width */
+    height: 200px;
+    /* Fixed height for uniformity */
+    object-fit: cover;
+    /* Ensure the image covers the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.cart-items {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item-detailss {
+    flex-grow: 1;
+}
+
+.item-detailss h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(8, 8, 100);
+    margin: 0;
+
+}
+
+.item-price {
+    color: tomato;
+    font-weight: bold;
+}
+
+.item-quantity {
+    color: #666;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.remove-buttonn {
+    background-color: tomato;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.remove-buttonn:before,
+.remove-buttonn:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.remove-buttonn:before {
+    transform: rotate(45deg);
+    /* First diagonal line */
+}
+
+.remove-buttonn:after {
+    transform: rotate(-45deg);
+    /* Second diagonal line */
+}
+
+.remove-buttonn:hover {
+    background-color: #e74c3c;
+    /* Slightly darker red on hover */
+    transform: scale(1.2);
+    /* Slight scale-up effect */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow on hover */
+}
+
+/* Optional: Active state (when clicked) */
+.remove-buttonn:active:before,
+.remove-buttonn:active:after {
+    transform: rotate(0deg);
+    /* Change lines back to horizontal when clicked */
+}
+
+.remove-buttonn:active {
+    background-color: #c0392b;
+    /* Darker red on click */
+    transform: scale(1);
+    /* No scaling effect when clicked */
+}
+
+.cart-summary {
+    width: 25%;
+    padding: 20px;
+    background: #f9f9f9;
+    /* Lighter background for the summary */
+    border-radius: 10px;
+    margin-left: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.summary-details p {
+    display: flex;
+    align-items: center;
+}
+
+.summary-details p::before {
+    content: "•";
+    margin-right: 10px;
+    color: #e74c3c;
+    /* Icon color */
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 15px 0;
+    border-top: 2px solid #bdc3c7;
+    margin-top: 40px;
+}
+
+.checkoutt-button {
+    background-color: #1a5f8c;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+.checkoutt-button:hover {
+    background-color: #1a5f8c;
+    /* Darker blue on hover */
+    transform: scale(1.05);
+    /* Slight scale-up effect on hover */
+}
+
+@media (max-width: 750px) {
+    .cart-container {
+        margin: 20px;
+    }
+
+    .cart-items {
+        grid-template-columns: 1fr;
+        /* Stack items in one column on mobile */
+    }
+
+    .cart-summary {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+        /* Add padding for better spacing */
+    }
+
+    .item-price,
+    .item-quantity {
+        font-size: 14px;
+        /* Adjust font size for readability */
+    }
+
+    .item-detailss h2 {
+        font-size: 18px;
+        /* Adjust heading size */
+    }
+}
+
+.loader {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    color: tomato;
+}
+
+/* Existing styles... */
+
+.item-detailss {
+    flex-grow: 1;
+    margin-bottom: 7px;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: flex-end;
+    /* Align items to the right */
+    align-items: flex-end;
+    margin-bottom: -10px !important;
+}
+
+/* Adjust the position of the remove button */
+.remove-buttonn {
+    background-color: tomato;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    margin-left: auto;
+}
