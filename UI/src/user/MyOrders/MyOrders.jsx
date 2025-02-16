@@ -20,7 +20,7 @@ const MyOrders = () => {
 
   return (
     <div className="my-orders-page">
-      <h2 className='tt'>My Orders</h2>
+      <h2 className='tt'>My Donations</h2>
       <div className="orders-table-container">
         <table className="orders-table">
           <thead>

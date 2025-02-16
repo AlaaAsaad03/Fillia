@@ -15,6 +15,7 @@ export const StoreContext = createContext(null);
 
     const addToCart = async (foodId) => {
 
+     
       const token = localStorage.getItem("token"); 
       const payload = JSON.parse(atob(token.split(".")[1]));
       const userId = payload.id;
@@ -26,7 +27,7 @@ export const StoreContext = createContext(null);
           await axios.post(
             `${url}/api/cart/add`,
             { userId, items: [{ itemId: foodId, quantity: 1 }] },
-            { headers: { token } }
+            { headers: { Authorization: `Bearer ${token}` } }
           );
         } catch (error) {
           console.error("Error adding to cart:", error);
@@ -53,7 +54,7 @@ export const StoreContext = createContext(null);
         await axios.post(
           `${url}/api/cart/remove`,
           { userId, items: [{ itemId: foodId, quantity: 1 }] },
-          { headers: { token } }
+          { headers: { Authorization: `Bearer ${token}` } }
         );
       } catch (error) {
         console.error("Error removing from cart:", error);

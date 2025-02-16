@@ -54,7 +54,7 @@ const CategoryBreakdown = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
-      <h2 className="card-title">Order Category Breakdown</h2>
+      <h2 className="card-title">Donations Category Breakdown</h2>
 
       {/* Pie chart container */}
       <div style={{ width: "100%", height: 350 }}>

@@ -164,12 +164,16 @@ useEffect(() => {
             <NavLink to='/admin/orders' className="sidebar-option sub-option" aria-label="Donations">
               <p>Donations</p>
             </NavLink>
+            {user.role === 'Packager' && (
             <NavLink to='/admin/packing' className="sidebar-option sub-option" aria-label="Packing">
               <p>Packing</p>
             </NavLink>
-            <NavLink to='/admin/delivery' className="sidebar-option sub-option" aria-label="Delivery">
-              <p>Delivery</p>
-            </NavLink>
+          )}
+                  {user.role === 'Delivery' && (
+              <NavLink to='/admin/delivery' className="sidebar-option sub-option" aria-label="Delivery">
+                <p>Delivery</p>
+              </NavLink>
+            )}
           </div>
         )}
 

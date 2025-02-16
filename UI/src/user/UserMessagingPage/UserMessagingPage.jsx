@@ -47,6 +47,29 @@ const UserMessagingPage = () => {
   }, [token]);
 
   useEffect(() => {
+  if (selectedAdmin) {
+    const fetchMessages = async () => {
+      try {
+        const response = await axios.get(
+          `${url}/api/chat/messages?receiverId=${selectedAdmin._id}`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        setMessages(response.data.messages);
+      } catch (error) {
+        console.error("Error fetching messages:", error);
+      }
+    };
+
+    fetchMessages();
+  }
+}, [selectedAdmin]);
+
+  useEffect(() => {
     const fetchAdmins = async () => {
       try {
         const response = await axios.get(`${url}/api/chat/admins`, {
@@ -231,46 +254,71 @@ const UserMessagingPage = () => {
     }
   };
 
-  const sendMessage = async () => {
-    if (!messageContent.trim()) return;
+const sendMessage = async () => {
+  if (!messageContent.trim()) return;
 
-    try {
-      const response = await axios.get(`${url}/api/user/${userId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+  try {
+    const response = await axios.get(`${url}/api/user/${userId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const name = response.data.data.name;      
+    socket.emit("sendMessage", {
+      senderId: userId,  
+      receiverId: selectedAdmin._id,
+      content: messageContent,
+      isRead: false,
+    });
+
+    if (!selectedAdmin.isOnline) {
+      await axios.post(
+        `${url}/api/notifications/add`, {
+          sender: userId,
+          senderModel: "user",
+          receiver: selectedAdmin._id,
+          receiverModel: "Admin",
+          message: `You have a new message from ${name}`,
         },
-      });
-
-      const name = response.data.data.name;      
-      socket.emit("sendMessage", {
-        senderId: userId,  
-        receiverId: selectedAdmin._id,
-        content: messageContent,
-        isRead: false,
-      });
-
-      if (!selectedAdmin.isOnline) {
-        await axios.post(
-          `${url}/api/notifications/add`, {
-            sender: userId,
-            senderModel: "user",
-            receiver: selectedAdmin._id,
-            receiverModel: "Admin",
-            message: `You have a new message from ${name}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
           },
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-      }
-      setMessageContent("");
-    } catch (error) {
-      console.error("Error sending message or creating notification:", error);
+        }
+      );
     }
-  };
+
+    // Clear the message input
+    setMessageContent("");
+
+    // Fetch updated messages after sending
+    fetchMessagesForSelectedAdmin();
+  } catch (error) {
+    console.error("Error sending message or creating notification:", error);
+  }
+};
+
+// Function to fetch messages for the selected admin
+const fetchMessagesForSelectedAdmin = async () => {
+  if (selectedAdmin) {
+    try {
+      const response = await axios.get(
+        `${url}/api/chat/messages?receiverId=${selectedAdmin._id}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      setMessages(response.data.messages);
+    } catch (error) {
+      console.error("Error fetching messages:", error);
+    }
+  }
+};
 
   const handleTyping = () => {
     socket.emit("typing", {
@@ -312,35 +360,39 @@ const UserMessagingPage = () => {
         <div className="user-admin-section">
           <h2 className="labeling">Admins</h2>
           <div className="user-admin-list">
-            {admins.map((admin) => (
-              <div key={admin._id} className="user-admin-profile">
-                <img src={`${url}/images/`+ admin.image || assets.user2} alt={admin.name} className="user-admin-avatar" />
-                <div className="user-admin-info">
-                  <p className="user-admin-name">{admin.name}</p>
-                  <p className={`user-admin-status ${admin.isOnline ? "user-admin-online" : "user-admin-offline"}`}>
-                    {admin.isOnline ? "Online" : "Offline"}
-                  </p>
-                  <div className="user-admin-icon-container">
-                    <i className="fas fa-comment-dots" onClick={() => startChat(admin)}></i>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+  {admins.map((admin) => (
+    <div key={admin._id} className="user-admin-profile">
+      <img 
+        src={`${url}/images/` + admin.image || assets.user2} 
+        alt={admin.name} 
+        className="user-admin-avatar" 
+      />
+      <div className="user-admin-info">
+        <p className="user-admin-name">{admin.name}</p>
+        <p className={`user-admin-status ${admin.isOnline ? "user-admin-online" : "user-admin-offline"}`}>
+          {admin.isOnline ? "Online" : "Offline"}
+        </p>
+      </div>
+      <div className="user-admin-icon-container">
+        <i className="fas fa-comment-dots" onClick={() => startChat(admin)}></i>
+      </div>
+    </div>
+  ))}
+</div>
           <div className="user-groups-section">
           <h2 className="labeling">Groups</h2>
           {groups.length > 0 ? (
           <div className="user-group-list">
             {groups.map((group) => (
-              <div key={group._id} className="user-group-profile">
-              <img src={group.image ?`${url}/images/${group.image}`:assets.NewLogo} alt={group.name} className="group-avatar" />
-                <div className="user-admin-info">
-                  <p className="user-group-name">{group.name}</p>
-                  <div className="user-group-icon-container">
+            <div key={group._id} className="user-group-profile">
+            <img src={group.image ? `${url}/images/${group.image}` : assets.NewLogo} alt={group.name} className="group-avatar" />
+            <div className="user-group-info">
+              <p className="user-group-name">{group.name}</p>
+              <div className="user-group-icon-container">
                     <i className="fas fa-comment-dots" onClick={() => startGroupChat(group)}></i>
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             ))}
           </div>
         ) : (

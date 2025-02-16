@@ -157,7 +157,7 @@ const AdminMessagingPage = () => {
 
       // Socket event for receiving messages
       socket.on("receiveMessage", (message) => {
-        assignColorToSender(message.sender); 
+        assignColorToSender(message.sender);
         console.log("Message received:", message);
         setMessages((prevMessages) => [...prevMessages, message]);
       });
@@ -195,6 +195,7 @@ const AdminMessagingPage = () => {
 
     const acceptChat = async (user) => {
       setSelectedUser(user);
+      await fetchMessagesForSelectedUser ();
       const response = await axios.get(
           `${url}/api/chat/messages?receiverId=${user._id}`,
           {
@@ -232,15 +233,45 @@ const AdminMessagingPage = () => {
     }
 };
   
-    const sendMessage = async () => {
-      socket.emit("sendMessage", {
-        senderId: adminId,
-        receiverId: selectedUser._id,
-        content: messageContent,
-        isRead: false,
-      });
-      setMessageContent("");
-    };
+const sendMessage = async () => {
+  if (!messageContent.trim()) return;
+
+  try {
+    socket.emit("sendMessage", {
+      senderId: adminId,
+      receiverId: selectedUser ._id,
+      content: messageContent,
+      isRead: false,
+    });
+
+    // Clear the message input
+    setMessageContent("");
+
+    // Fetch updated messages after sending
+    await fetchMessagesForSelectedUser ();
+  } catch (error) {
+    console.error("Error sending message:", error);
+  }
+};
+
+// Function to fetch messages for the selected user
+const fetchMessagesForSelectedUser  = async () => {
+  if (selectedUser ) {
+    try {
+      const response = await axios.get(
+        `${url}/api/chat/messages?receiverId=${selectedUser ._id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      setMessages(response.data.messages);
+    } catch (error) {
+      console.error("Error fetching messages:", error);
+    }
+  }
+};
 
     const handleTyping = () => {
       socket.emit("typing", {

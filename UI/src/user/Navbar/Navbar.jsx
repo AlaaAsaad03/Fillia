@@ -168,8 +168,8 @@ const toggleNotificationsDropdown = (e) => {
           {/* Navbar Links */}
           <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
             <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>Home</Link>
-            <Link to='/items' onClick={() => setMenu("items")} className={menu === "items" ? "active" : ""}>Items</Link>
             <Link to='/cases' onClick={() => setMenu("cases")} className={menu === "cases" ? "active" : ""}>Cases</Link>
+            <Link to='/items' onClick={() => setMenu("items")} className={menu === "items" ? "active" : ""}>Items</Link>
             {isAuthenticated &&
             <Link to='/events' onClick={() => setMenu("events")} className={menu === "events" ? "active" : ""}>Events</Link>
              }

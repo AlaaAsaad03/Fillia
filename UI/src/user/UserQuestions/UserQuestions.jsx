@@ -97,7 +97,7 @@ const UserQuestions = () => {
   return (
     <div className="question-Parts">
        <div className="title">
-        <p className="n">- Testimonials -</p>
+        <p className="n">- Questions -</p>
       </div>
       <div className="Question-Layout">
       <h2 className="faq-title">Frequently Asked Questions</h2>

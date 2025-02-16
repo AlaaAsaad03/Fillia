@@ -103,7 +103,6 @@
 }
 
 .user-admin-info {
-  flex: 1;
   font-weight: bold;
 }
 
@@ -124,6 +123,7 @@
 .user-admin-status {
   font-size: 0.9rem;
   font-weight: bold;
+  bottom: -2px;
 }
 
 .user-admin-online {
@@ -329,7 +329,6 @@
 .user-admin-icon-container {
   gap: 0.5rem;
   justify-content: flex-end;
-  margin-top: 0.5rem;
   margin-left: 230px;
 }
 
@@ -338,7 +337,6 @@
 .user-admin-icon-container i {
   color: white;
   font-size: 1.2rem;
-  /* Smaller icon size */
   cursor: pointer;
   transition: transform 0.2s, color 0.3s;
 }
@@ -357,4 +355,28 @@
 .user-message-group {
   display: flex;
   flex-direction: column;
+}
+
+.user-group-icon-container,
+.user-admin-icon-container {
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-left: 230px;
+  margin-right: 10px;
+}
+
+.user-group-icon-container {
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  margin-right: 10px;
+  margin-left: 200px;
+}
+
+.user-admin-icon-container {
+  margin-left: auto;
+  /* Aligns the icon to the right */
+  display: flex;
+  align-items: center;
+  /* Center the icon vertically */
 }

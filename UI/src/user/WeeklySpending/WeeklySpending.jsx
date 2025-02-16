@@ -48,7 +48,7 @@ const WeeklySpending = () => {
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.3 }}
     >
-      <h2 className="card-title">Weekly Spending Pattern</h2>
+      <h2 className="card-title">Weekly Donating Pattern</h2>
 
       <div style={{ width: "100%", height: 300 }}>
         <ResponsiveContainer>
