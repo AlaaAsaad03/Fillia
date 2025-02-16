@@ -33,7 +33,7 @@ def prepare_dataset(cases):
 
     df = pd.json_normalize(processed_cases)
     df['combined_features'] = df.apply(
-        lambda row: f"{row['title']} {row['description']} {', '.join(row['itemsNeeded'])} {row['targetGroup']} {row['budgetNeeded']}",
+        lambda row: f"{row['title']} {row['description']} {', '.join(row['itemsNeeded'])} {row['budgetNeeded']}",
         axis=1
     )
     return df
