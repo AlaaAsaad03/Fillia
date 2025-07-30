@@ -55,16 +55,16 @@ Clone the repo and get started locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/fillia.git
+git clone https://github.com/AlaaAsaad03/fillia.git
 cd fillia
 
 # Install backend
-cd server
+cd backend
 npm install
 npm run dev
 
 # Install frontend
-cd ../client
+cd ../UI
 npm install
 npm start
 ````
