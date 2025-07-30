@@ -1,127 +1,111 @@
 
-````markdown
-# 🧡 Fillia: Bridging Hearts with Help
 
-Fillia is a humanitarian web platform designed to connect people in need with donors, small businesses, and volunteers across Lebanon. Developed as a senior capstone project, it blends empathy with technology—turning compassion into action.
+````
+# 🧡 Fillia — Rebuild Lebanon, One Box at a Time
 
-> 🕊️ The name "Fillia" is inspired by *Feel You* and *Fill the Box*, a call to both **empathize** and **act**.
+**Fillia** is more than a charity platform. It’s a compassionate movement—built to connect Lebanese families in need with generous hearts across the country. Whether you're a donor, volunteer, business owner, or someone seeking help, **Fillia** bridges the gap with love, transparency, and technology.
 
----
-
-## 🌍 Background
-
-In the aftermath of war and economic collapse, thousands of Lebanese families found themselves without homes or basic necessities. Traditional charities proved insufficient in transparency, reach, and efficiency. **Fillia** was born to fill that gap—a platform where aid meets dignity, and donations are delivered with care.
+🌱 _“Feel You” + “Fill the Box” = Fillia_ — A name that embodies empathy and action.
 
 ---
 
-## 🔑 Key Features
+## 💡 Why Fillia?
 
-- 🧺 **Box Donations**: Add items to a box and donate directly to cases.
-- 🗃️ **Create & Adopt Cases**: Submit your own or support existing ones.
-- 🛒 **Shop & Donate**: Purchase affordable goods from local businesses.
-- 📦 **Delivery & Packaging Management**: Real-time coordination by volunteers.
-- 🧠 **AI Integration**: Case approvals assisted by Trust AI.
-- 🤝 **Real-time Chat**: Seamless communication between users and leaders.
-- 📈 **Dashboard Analytics**: User and admin views for donations, events, and more.
-- 🎯 **Recommender System**: Smart suggestions for donations.
-- 📅 **Event Scheduling**: Manage charity events with ease.
-- 📬 **Notifications & Email System**: For all actions, reminders, and updates.
+After the devastating war and ongoing economic collapse in Lebanon, traditional aid systems couldn’t keep up. Fillia was born as a response—to offer:
+
+- 🤝 Direct communication between donors and recipients
+- 🛍️ Donations through real items, not just money
+- 🏪 Involvement of small local businesses
+- 🔄 Real-time tracking of every donation
+- 💬 Human connection through chat, stories, and events
 
 ---
 
-## 🧪 Tech Stack
+## 🚀 Features at a Glance
 
-### 🔧 Backend
-- **Node.js**, **Express.js**, **NestJS**
-- **MongoDB Atlas** for NoSQL data storage
-- **Stripe** for secure payment integration
-- **Socket.io** for real-time chat and group messaging
-- **Docker** for containerization and deployment
+| 🔸 For Public Users        | 🔸 For Donors/Users          | 🔸 For Leaders/Admins        |
+|---------------------------|------------------------------|------------------------------|
+| Browse items & cases      | Add items to donation box    | Approve cases & suggestions  |
+| Register or log in        | Create your own case         | Manage campaigns/events      |
+| Request to volunteer      | Donate items via Stripe      | Enable AI decision support   |
+| Ask questions             | Join donation events         | Add/Edit categories/items    |
 
-### 🎨 Frontend
-- **React.js**
-- **Tailwind CSS** & **Framer Motion** for stylish UI & animations
-- Responsive design for mobile and desktop
-
----
-
-## 🧩 User Roles
-
-| Role         | Description                                                                 |
-|--------------|-----------------------------------------------------------------------------|
-| Public User  | Browse cases, request to join, ask questions                                |
-| User         | Create cases, donate items, suggest products, join events                   |
-| Leader       | Review submissions, manage content, schedule events, and communicate        |
-| Packager     | Handle donation packaging and status tracking                               |
-| Delivery Man | Deliver packaged donations and update delivery status                       |
+✅ **Built-in Roles:** Public, User, Leader, Packager, Delivery Man  
+💬 **Live Chat:** Users & Leaders  
+📦 **Box System:** Add & manage item-based donations  
+📊 **Dashboards:** Track impact, analytics, and manage content  
+🧠 **AI-Powered:** Trust AI & Recommender System  
+🎉 **Event Scheduler:** Join & create community-driven charity events  
 
 ---
 
-## 📝 Requirements
+## 🛠️ Tech Stack
 
-### ✅ Functional
-- Case creation and adoption
-- Chat and feedback system
-- Dynamic filtering and item management
-- User dashboard with donation and case history
+**Frontend**  
+> React.js • Tailwind CSS • Framer Motion • Responsive Design  
 
-### 📊 Non-Functional
-- Responsive across devices
-- Secure and private user data handling
-- 24/7 availability
-- Fast load and interaction times (2–3s)
+**Backend**  
+> Node.js • Express.js • NestJS • Socket.io • MongoDB Atlas • Stripe API  
+
+**Extras**  
+> Docker • Chat System • Email Notifications • Role-based Access Control
 
 ---
 
-## 🧭 Project Timeline (Gantt Highlights)
+## 📦 Installation
 
-| Task                      | Duration | Dependency              |
-|---------------------------|----------|--------------------------|
-| Research                  | 32 days  | —                        |
-| Requirement Analysis      | 18 days  | Research                 |
-| Frontend Implementation   | 31 days  | Software Design          |
-| Backend Implementation    | 36 days  | Database Implementation  |
-| Testing                   | 13 days  | Frontend/Backend Integration |
+Clone the repo and get started locally:
 
----
+```bash
+# Clone the repository
+git clone https://github.com/your-username/fillia.git
+cd fillia
 
-## 🚀 Getting Started (Local Setup)
+# Install backend
+cd server
+npm install
+npm run dev
 
-1. **Clone the Repo**
-   ```bash
-   git clone https://github.com/AlaaAsaad03/fillia.git
-   cd fillia
+# Install frontend
+cd ../client
+npm install
+npm start
 ````
 
-2. **Backend Setup**
-
-   ```bash
-   cd server
-   npm install
-   npm run dev
-   ```
-
-3. **Frontend Setup**
-
-   ```bash
-   cd client
-   npm install
-   npm start
-   ```
-
-
-## 📚 License
-
-This project is part of a senior graduation requirement at **Al Maaref University** and is licensed for educational and humanitarian use.
+> 💡 Visit [http://localhost:3000](http://localhost:3000) to explore Fillia on your local machine.
 
 ---
 
-## 🤝 Acknowledgements
+## 🖼️ Preview
 
-To our mentors, martyrs, families, and dear friend Mohammad Jaafar Atwi—you are part of every line of code we wrote. 💔
+![Home Page](screenshots/homepage.png)
+![Cases List](screenshots/cases.png)
+![Donation Flow](screenshots/donation.png)
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ---
 
-> Together, let's not just donate—but rebuild Lebanon, one box at a time.
+## 🤍 Credits
+
+👩‍💻 Developed by
+**Alaa Asaad** & **Zahraa Ibrahim**
+🎓 *Bachelor of Computer Science – Al Maaref University*
+
+🎗️ Dedicated to our families, mentors, and the brave souls lost in war.
+🌟 Special mention to our beloved friend **Mohammad Jaafar Atwi**, whose spirit lives in every line of code.
+
+---
+
+## 📜 License
+
+This project was built for educational and humanitarian purposes.
+© 2025 Alaa & Zahraa — All rights with love.
+
+---
+
+> ✨ *"Together, let’s not just give—let’s rebuild, restore, and revive."*
+
+```
+
 
 ```
