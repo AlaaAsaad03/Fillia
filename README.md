@@ -1,6 +1,6 @@
 # 🧡 Fillia — Rebuild Lebanon, One Box at a Time
 
-**Fillia** is more than a charity platform. It’s a compassionate movement—built to connect Lebanese families in need with generous hearts across the country. Whether you're a donor, volunteer, business owner, or someone seeking help, **Fillia** bridges the gap with love, transparency, and technology.
+**Fillia** is more than a charity platform. It’s a compassionate movement; built to connect Lebanese families in need with generous hearts across the country. Whether you're a donor, volunteer, business owner, or someone seeking help, **Fillia** bridges the gap with love, transparency, and technology.
 
 🌱 _“Feel You” + “Fill the Box” = Fillia_ — A name that embodies empathy and action.
 
@@ -90,5 +90,5 @@ This project was built for educational and humanitarian purposes.
 
 ---
 
-> ✨ *"Together, let’s not just give—let’s rebuild, restore, and revive."*
+> ✨ *"Together, let’s not just give...let’s rebuild, restore, and revive."*
 
