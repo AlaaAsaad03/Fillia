@@ -78,8 +78,24 @@ npm start
 **Alaa Asaad** & **Zahraa Ibrahim**
 🎓 *Bachelor of Computer Science – Al Maaref University*
 
-🎗️ Dedicated to our families, mentors, and the brave souls lost in war.
-🌟 Special mention to our beloved friend **Mohammad Jaafar Atwi**, whose spirit lives in every line of code.
+---
+
+## 🙏 Acknowledgements
+
+This project would not have been possible without the support, guidance, and encouragement of many individuals.
+
+We are deeply thankful to the faculty and mentors who guided us through every challenge, offering insights that shaped this project into what it is today.
+
+To our families, whose unwavering belief in us provided the strength we needed throughout this journey thank you for standing by us every step of the way.
+
+To the friends and peers who offered help, shared feedback, and inspired us to do better  your presence made the process more meaningful.
+
+To the souls we carry in our hearts  those who were meant to walk this journey with us but couldn't your memory lives on in the work we've done.
+
+And finally, to everyone who believed in our vision for **Fillia** — your encouragement gave us the drive to turn compassion into action.
+
+> _Thank you for helping us build something bigger than ourselves._ 💛
+
 
 ---
 
