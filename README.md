@@ -1,6 +1,3 @@
-
-
-````
 # 🧡 Fillia — Rebuild Lebanon, One Box at a Time
 
 **Fillia** is more than a charity platform. It’s a compassionate movement—built to connect Lebanese families in need with generous hearts across the country. Whether you're a donor, volunteer, business owner, or someone seeking help, **Fillia** bridges the gap with love, transparency, and technology.
@@ -72,18 +69,8 @@ npm install
 npm start
 ````
 
-> 💡 Visit [http://localhost:3000](http://localhost:3000) to explore Fillia on your local machine.
+> 💡 Visit [http://localhost:5173](http://localhost:5173) to explore Fillia on your local machine.
 
----
-
-## 🖼️ Preview
-
-![Home Page](screenshots/homepage.png)
-![Cases List](screenshots/cases.png)
-![Donation Flow](screenshots/donation.png)
-![Admin Dashboard](screenshots/admin-dashboard.png)
-
----
 
 ## 🤍 Credits
 
@@ -105,7 +92,3 @@ This project was built for educational and humanitarian purposes.
 
 > ✨ *"Together, let’s not just give—let’s rebuild, restore, and revive."*
 
-```
-
-
-```
